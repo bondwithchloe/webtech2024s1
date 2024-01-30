@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title> Intro to Hotspots and Image Maps </title>
+
+	<style type="text/css">
+		h1, p{text-align: center;}
+
+		p{border: 5px solid green;}
+
+		body {background-image: url(music.gif); 
+		background-repeat: repeat; 
+		background-position: center;
+		background-attachment: fixed;}
+
+		img#b { /*float left*/ float:left; border:5px solid red; width:40%;
+		margin-left: 40px; padding:10px; 
+		position: absolute; top:500px; left:400px; 
+		}
+
+		h2{ font-weight: bold; color: yellow; font-style: italic; font-size: 3em;
+			position: absolute; top:500px; left:400px; }
+
+	</style>
+
+<title>Beaver with Superimposed Text</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+	
+	
+	
+  </head>
+  
+  <body>
+	<h1> Image Hotspots and Image Maps</h1>
+
+	<map name="middlesex" id="M">
+		<area shape="rect" coords="301, 351, 330, 383" href="http://www.wellesleyma.gov " alt="Town of Wellesley"/>
+		<area shape="rect" coords="338, 314, 360, 373" href="http://www.newtonma.gov" alt="Town of Newton"/>
+	</map>
+
+	<p>
+		 <img src="Middlesex.gif" alt="Middlesex County Map" title="Middlesex County Map" usemap="#middlesex"/>
+	</p>
+
+	<h2> Go Beavers!!!</h2>
+
+	<img id="b" src="beaver.jpg" alt="Beaver" title="Go Babo"/>
+	
+
+
+
+  </body>
+
+
+  
+</html>
