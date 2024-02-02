@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>How many will remember to change title??</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        h1#q1h{color: navy; text-align: center;}
+        h3#q2h{color: olive;text-align: left;}
+        h2#q3h{color: red; text-align: right;}
+        p#pb{border: 5px solid lime;}
+        .pc{ color: navy; font-family: sans-serif; font-style: italic;} 
+        div#d1{background-color: yellow; margin-bottom: -19px;}
+        div#d2{background-color: green; margin-top: -19px;}
+        div#d3{background-color: lime; margin-top: -20px;}
+        span.big {font-size: 1.5em;}
+        img#datig {width:20%; float:left; margin-top: 0.5%; margin-right: 1%; margin-bottom: 0.5%; }
+        p#tig {border: 3px solid red; width: 80%; 
+            margin-right: auto; margin-left: auto ; padding: 1%;
+            background-color: beige; opacity: 0.5;} 
+            /* if we did padding: 5% 10%; that would mean 5% top & 10% bottom. But if we did 5% 10% 5% 10% that would mean top left bottom right (clockwise) */
+        /* margin auto centers block tags on the page */
+        div#tigsec {background: url(photo.JPG); width: 70%; margin-right: auto; margin-left: auto; padding-top: 3%; padding-bottom: 3%;} 
+        /* default of image is always repeat, fixed & center  */
+        /* padding changes the space within the border */
+        
+        
+    </style>
+
+	
+</head>
+
+<body>
+    <!-- Italicize the line below -->
+	<h1> This line demonstrates H1 </h1>
+    <!-- Make the line below bold -->
+	<h2> This line demonstrates H2 </h2>
+    <!-- Underline the line below -->
+	<h3> This line shows how H3 will be different from H1 and H2 </h3>
+
+	<hr />
+    <div id="d1">
+    <!-- Section 1 -->
+    <!-- Applies only to the h1 below - navy font and centered-->
+	<h1 id="q1h">Quote One from <span class="big">W</span>inston <span class="big">C</span>hurchill </h1> 
+	<p class="pc"> 
+        <!-- this is the quote -->Criticism may not be agreeable, but it is necessary. 
+	    It fulfils the same function as pain in the human body. 
+	    It calls attention to an unhealthy state of things. 
+    </p>
+    <!-- End of Section 1 -->
+    </div>
+
+
+    <div id="d2">
+    <!-- Section 2 -->
+    <!-- Olive color font and left aligned - applies only to h3 below-->
+	<h3 id="q2h">Quote Two from <span class="big">W</span>inston <span class="big">C</span>hurchill </h3> 
+	
+    <p class="pc">
+        <!-- this is the quote --> Courage is rightly esteemed the first of human qualities... because it is 
+        the quality which guarantees all others. Courage is what it takes to stand up 
+        and speak; courage is also what it takes to sit down and listen. 
+    </p>
+    <!-- End of Section 2 -->
+    </div>
+
+    <div id="d3">
+    <!-- Section 3 -->
+    <!-- Applies only to the h2 below - red font and right aligned -->
+	<h2 id="q3h"> Quote Three from <span class="big">W</span>inston <span class="big">C</span>hurchill</h2> 
+	<h3> This paragraph will have a border</h3>
+    <p class="pc" id="pb"> <!-- it will prioritize the class tag style because in the CSS Styles above we have class defined after id. This paragraph should have a 5px thick, lime colored, solid border-->
+        <!-- this is the quote -->Continuous effort - not strength or intelligence - is the key to unlocking 
+        our potential. 
+    </p>
+    <!-- end of section 3 -->
+    </div>
+    <hr />
+
+    <div id="tigsec">
+    <h1> The Tiger </h1>
+	<p id="tig">
+        
+        The tiger (Panthera tigris) is the largest cat species, reaching a total body length of up to 3.3 metres (11 ft) and weighing up to 306 kg (670 lb). It is the third largest 
+        land carnivore (behind only the Polar bear and the Brown bear). Its most recognizable feature is a pattern of dark vertical stripes on reddish-orange fur with lighter 
+        underparts. It has exceptionally stout teeth, and the canines are the longest among living felids with a crown height of as much as 74.5 mm (2.93 in) or even 90 mm (3.5 in).
+        [4] In zoos, tigers have lived for 20 to 26 years, which also seems to be their longevity in the wild.[5] They are territorial and generally solitary but social animals, 
+        often requiring large contiguous areas of habitat that support their prey requirements. This, coupled with the fact that they are indigenous to some of the more densely 
+        populated places on Earth, has caused significant conflicts with humans.
+        <img id="datig" src="tiger5.jpg" alt="Tiger Image" title="Tiger"/>
+        Tigers once ranged widely across Asia, from Turkey in the west to the eastern coast of Russia. Over the past 100 years, they have lost 93% of their historic range, and 
+        have been extirpated from southwest and central Asia, from the islands of Java and Bali, and from large areas of Southeast and Eastern Asia. Today, they range from the 
+        Siberian taiga to open grasslands and tropical mangrove swamps. The remaining six tiger subspecies have been classified as endangered by IUCN. The global population 
+        in the wild is estimated to number between 3,062 to 3,948 individuals, down from around 100,000 at the start of the 20th century,[6] with most remaining populations 
+        occurring in small pockets that are isolated from each other. Major reasons for population decline include habitat destruction, habitat fragmentation and poaching.[1] 
+        The extent of area occupied by tigers is estimated at less than 1,184,911 km2 (457,497 sq mi), a 41% decline from the area estimated in the mid-1990s.[7]
+    </p>
+    </div>
+
+</body>
+</html>
