@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS11 - Practicing Javascript</title>
+
+	<style type="text/css">
+	h1 {font-weight:bold; background-color: Silver;}
+	p {text-align:center;}
+  p#p2 {border:3px solid red;}
+	</style>
+	    
+	<script type="text/javascript">
+    function changeTitle()
+    {
+      var mytitle;
+      mytitle = document.getElementById("one");
+      mytitle.innerHTML = "Javascript is done";
+      mytitle.style.color="navy";
+      mytitle.style.fontFamily= "Lucida Handwriting";
+      mytitle.style.textAlign= "center";
+    }
+
+    function chgBkCol()
+    {
+      document.getElementById("p2").style.backgroundColor = "yellow";
+    }
+
+    function chgBkColBk()
+    {
+      document.getElementById("p2").style.backgroundColor = "white";
+    }
+
+    function showMeVar()
+    {
+      alert ("Get Started...")
+      var x, y;
+      const mytext = "This is a literal";
+      x = 10;
+      y = 15;
+      alert(x + y);
+      x = 35;
+      alert(x + y);
+      x = "Shankar";
+      y = " is a cool dude";
+      alert(x + y);
+      x = "35";
+      y = "15";
+      alert(x + y);
+      alert(mytext)
+    }
+      
+    function chgText()
+    {
+      var mytext;
+      mytext = document.getElementById("two");
+      const c1 = " Don't Look - I am Changing";
+      const c2 = "I Have Changed!!!";
+
+      if (mytext.innerHTML == c1)
+      {
+        mytext.innerHTML = c2;
+      }
+      else
+      {
+        mytext.innerHTML = c1;
+      }
+    }
+      // if (condition) then  { action 1; } else { action 2;}
+</script>
+  </head>
+
+  <body>
+    <hr />
+  <!-- When you click on the button, please do the following: -->
+  <!-- 1. Change the text of the title to "Javascript is done"-->
+  <!-- 2. Center the title on the page -->
+  <!-- 3. Change the color of the font to navy -->
+  <!-- 4. Change the font family to Lucida Handwriting -->
+	<h1 id="one"> Practice with Javascript</h1>
+    <hr />
+    <p>
+        <button onclick="changeTitle()">Click To Change Title</button>
+    </p>
+    <hr />
+   	<h1> More practice with Javascript </h1>
+    <!-- When you mouseover the paragraph change the background color. -->
+    <!-- Your choice of color. -->
+    <!-- When you mouseout, change the background color to white. -->
+    <p id="p2" onmouseover="chgBkCol()" onmouseout="chgBkColBk()"> Mouse over me to change my color </p>
+    
+    <hr/>
+    <h1> Understanding Variables in Javascript </h1>
+    <!-- We will work through this one in class -->
+    <p>
+    	<button onclick="showMeVar()"> Click on me to start </button>
+    </p>
+    <hr/>
+    <h1> Conditional Statement - Practice</h1>
+    <!-- When you click on the line below, change the text to -->
+    <!-- I Have Changed! When you click again, go back to the -->
+    <!-- original text.-->
+    <h2 id="two" onclick="chgText()"> Don't Look - I am Changing</h2>
+  </body>
+</html>
