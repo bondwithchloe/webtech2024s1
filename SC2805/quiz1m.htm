@@ -14,7 +14,7 @@
             font-weight: bold;
             text-align: center;
             margin-top: 30px; margin-left: 150px; margin-right: 150px; margin-bottom: 0px;
-            width: auto;
+            width: 100%;
         }
 
         h2 {
@@ -23,6 +23,8 @@
             font-style: italic;
             text-align: left;
             background-color: white; 
+            display: inline-block;
+            padding: 0 1em;
             /* It must have a white background that should be about twice the length of the characters HTML5. */
         }
 
@@ -35,9 +37,8 @@
     div#html {
         background-color: burlywood;
         padding-top: 40px; padding-bottom: 40px; padding-left: 50px; padding-right: 50px;
-        margin-top: 0px;
-        width: auto;
-        
+        margin-top: 0px; margin-left: 150px; margin-right: 150px;
+        width: 91.5%;
 
     }
 
@@ -45,12 +46,15 @@
         margin-top: 10px;
         display: inline-block; 
         padding-right: 100%; 
+        display: inline-block;
+        vertical-align: middle; 
+        width: auto; 
+        height: auto; 
+        max-height: 100%;
         
     }
 
-    .width {
-        width: auto;
-    }
+    
 
    
 
@@ -86,7 +90,7 @@
     -->
 
     <!-- Your HTML goes here -->
-    <class id="width">
+    <div id="width">
         <h1 id="title">Quiz 1 Make-Up</h1>
 
         <div id="html">
@@ -96,8 +100,8 @@
             Wide Web.
 
             <!-- insert image here -->
-            <img id="html" src="HTML5.png" alt="html" title="html" width="200"/>
-
+            <img id="html" src="HTML5.png" alt="html" title="html" width="200"/> 
+            
             As of October 2014 this is the final and complete fifth revision of the HTML standard of the World Wide Web
             Consortium (W3C). The previous version, HTML 4, was standardised in 1997.Its core aims have been to improve the language with support
             for the latest multimedia while keeping it easily readable by humans and consistently understood by computers and devices (web browsers,
@@ -108,7 +112,7 @@
             or XHTML syntax. </p>
 
         </div>
-    </class>
+    </div>
 
 
 </body>
