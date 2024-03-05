@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+	/* Your styles go here */
+	img{
+		margin-right: 5%; margin-left: 5%;
+	}
+	</style>
+
+	<script type="text/javascript">
+		function makeBig(shankar)
+		{
+			var myimg;
+			if (shankar == "one")
+			{
+				myimg = document.getElementById("one")
+				myimg.width = myimg.width * 1.5;
+			}
+			else 
+			{
+				myimg = document.getElementById("two");
+				myimg.width = myimg.width * 1.5;
+			}
+		}
+
+		function makeSmall(shankar)
+		{
+			var myimg;
+			if (shankar == "one")
+			{
+				myimg = document.getElementById("one")
+				myimg.width = myimg.width / 1.5;
+			}
+			else 
+			{
+				myimg = document.getElementById("two");
+				myimg.width = myimg.width / 1.5;
+			}
+		}
+
+
+	</script>
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1>Passing Parameters and Manipulating Images</h1>
+	<img id="one" onmouseover="makeBig(this.id)" onmouseout="makeSmall(this.id)" src="planes.jpg" title="Flying High" alt="Plane Image" width="250"/>
+	<img id="two" onmouseover="makeBig(this.id)" onmouseout="makeSmall(this.id)"src="ships.jpg" title="Sailing Far" alt="Ship Image" width="250"/>
+
+		
+	
+	
+  </body>
+</html>
