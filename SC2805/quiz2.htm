@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>About Facebook</title> <!-- No credit if you do, -1 if you do not -->
+        <style type="text/css">
+            /* <!-- It uses Arial font, yellow color. (1) --> */
+            h1#title {
+                font-family: Arial, Helvetica, sans-serif; color: yellow; text-align: center;
+            }
+
+            /*<!-- It must have the image facebook.png as the background. (2)-->*/
+
+        /* <!--    The form has a silver background, navy font, arial. (2)-->
+        <!--    The form has a 300px white space to the right and left.(2)-->
+        <!--    The form has a 100px silver space to the left. (1)-->
+        <!--    The form has a 50px silver space to the top and bottom. (2)--> */
+
+        form{background-color: silver; font-family: arial; color: navy; width: 60%;
+        margin-right: 300px; margin-left: 300px; padding-left:100px; padding-top: 50px; padding-bottom: 50px;}
+
+        h1#listtitle {
+            color: black; font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ol {
+            list-style-type: lower-greek; list-style-image: none;
+        }
+
+        ul {
+		list-style-image: url(star.gif);}
+
+        div#d1{background-image: url(facebook.png); background-repeat: repeat; background-position: center; background-attachment: fixed;  margin-right: 200px; margin-left: 200px;}
+
+        
+         
+        
+        </style>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <!-- The title, About Facebook must use h1 tag -->
+        <div id="d1">
+        <h1 id="title">About Facebook</h1>	
+        </div>
+        <!-- There must be a 200px (white) space to the left and right (1)-->
+        <!-- Below the title, construct the form shown on screen (7)--> 
+        <form method="POST" action=""> 
+        <!-- 1. The form has a text box to capture your name - size is 20 -->
+        <!-- 2. The form has a radio button to capture whether you like -->
+        <!--    Facebook. Yes and No options. -->
+        <!-- 3. The form has a dropdown to see how many times a day you access -->
+        <!--    FB. The three values are 100, 50, and 25. -->
+        <!-- 4. The form has a Submit Data and a Clear Data button to submit -->
+        <!--    and reset the form data respectively. --> 
+            <!-- Input text boxes -->
+            <p>
+                Your Name:
+                <input type="text" name="myname" placeholder="Enter Name Here" size="20" maxlength="40"/>
+    
+            </p>
+
+            <p>
+                Do you like Facebook:
+                <input type="radio" name="yes" value="Yes"/> Yes
+                <input type="radio" name="no" value="No"/> No
+            </p>
+    
+            <!-- Input dropdowns -->
+            <p>
+                How many times a day do you access facebook:
+                <select name="inquiry">
+                    <option value="100">100</option>
+                    <option value="50">50</option>
+                    <option value="25">25</option>
+
+                </select>
+            </p>
+    
+    
+            <p>
+                <input type="submit" name="Submit Data" value="Send"/> &nbsp; &nbsp;
+                <input type="reset" name="Reset" value="Clear Data"/>
+            </p>
+
+    
+        </form>
+       
+            
+        <!-- For the last 5 points do the following: -->
+        <!-- Create a nested list using the data given.-->
+        <h1 id="listtitle">Courses offered in Babson</h1>
+
+    <div class="sublist" >
+		<ul>
+			<li>Management Courses</li>
+				<ol>
+					<li>FME</li>
+					<li>SME</li>
+				</ol>
+			<li>Liberal Arts Courses</li>
+            <ol>
+                <li>FCI</li>
+                <li>Critical Race</li>
+            </ol>
+		</ul>
+    </div>
+
+        <!-- The outer list must be unordered -(1)-->
+        <!-- It must use the image star.gif as the bullet. (2)-->
+        <!-- The inner list must be ordered with small greek numbering.(2)-->
+        <!-- This h1 must not have any background or color. -->
+        <!-- No styles needed. In other words, don't touch it. -->
+
+    
+    </body>
+</html>
