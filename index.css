@@ -1,0 +1,12 @@
+/* styles.css */
+
+body {
+    background-color: grey; /* You can choose any shade of grey */
+  }
+  
+  h1 {
+    font-family: Arial, sans-serif; /* Sets the font family to Arial */
+    color: navy; /* Sets the font color to navy */
+    text-align: center; /* Centers the h1 text on the page */
+  }
+  
