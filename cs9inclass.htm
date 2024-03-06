@@ -1,0 +1,78 @@
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+	/* Your styles go here */
+	form{background-color: silver; font-family: Arial, Helvetica, sans-serif; width: 60%;
+	margin-right: auto; margin-left: auto; border: 4px solid navy; 
+	padding-left: 3%; padding-top: 2%; padding-bottom: 2%; } 
+	</style>
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1>My Class Form</h1>
+	<form method="post" action="">
+		<p> <!-- This is a label-->
+			Please Enter Your Name &nbsp; &nbsp;
+			<input type="text" name="myname" placeholder="Enter Name Here" size="20" maxlength="40"/>
+		</p>
+
+		<p>Please Select Your Class
+			<select name="myclass">
+
+			<option value="empty">Please Select a Class</option>	
+			<option value="freshman">Freshman</option>
+			<option value="sophomore">Sophomore</option>
+			<option value="junior">Junior</option>
+			<option value="Senior">Senior</option>
+
+			</select> 
+		</p>
+
+		<p>
+			Please Select Your Grade &nbsp; &nbsp;
+			<input type="radio" name="grade" value="A"/> A Grade
+			<input type="radio" name="grade" value="B"/> B Grade
+			<input type="radio" name="grade" value="C"/> C Grade
+			<input type="radio" name="grade" value="D"/> D Grade
+			<input type="radio" name="grade" value="F"/> F Grade
+
+		</p>
+
+		<p>
+			Please Select the Magazines You Read: </br>
+			<input type="checkbox" name="mymags" value="wsj"/>Wall Street Journal</br>
+			<input type="checkbox" name="mymags" value="bg"/>Boston Globe</br>
+			<input type="checkbox" name="mymags" value="nyt"/>New York Times</br>
+
+		</p>
+
+		<p>
+			Please Enter Any Suggestions for the Course: </br>
+			<textarea name="mysuggs" rows="5" cols="40" placeholder="Type Here"></textarea>
+
+		</p>
+
+		<p>
+			<input type="submit" name="Submit" value="I am Done"/> &nbsp; &nbsp; 
+			<input type="reset" name="Reset" value="I am Wrong"/>
+		</p>
+
+
+
+
+
+
+	</form>
+	
+
+
+  </body>
+</html>

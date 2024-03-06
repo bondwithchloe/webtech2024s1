@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Multimedia CSS</title>
+
+	<style>
+	
+	div#p {background-color: aliceblue;
+		color: black; 
+		width: 20%; 
+		height: 200px;
+		margin-right: auto; margin-left: auto;
+		overflow: scroll;
+		}
+
+	img#b {width: 50%; display: block; margin-right: auto; margin-left: auto;
+		border-radius: 50%;
+	}
+
+	@keyframes dizzy {
+		from {transform: rotate(0deg);}
+		to{transform: rotate(720deg);}
+	}
+
+	.bturn {
+		animation-name: dizzy;
+		animation-duration: 0.5s;
+		animation-iteration-count: 10;
+		animation-timing-function: ease;
+		margin-top: 3%;
+	}
+
+	@keyframes moveit {
+		from{left: 20px;}
+		to{left:300px}
+	}
+
+	.moveme {
+		animation-name: moveit;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		width: 20%;
+		background-color: red;
+		color: white;
+		position: relative;
+
+	}
+
+	</style>
+	
+	
+	
+  </head>
+
+  <body>
+	<h1>Multimedia and Fun CSS</h1>
+	<!-- Your HTML goes here -->
+	<audio controls autoplay loop>
+		<source src="glitch-short-break.mp3" type="audio/mp3"/>
+	</audio>	
+</br>
+	<video controls>
+		<source src="TestVideoByFisk.mp4" type="video/mp4"/>
+	</video>
+</br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WOf7pdj4eks?si=u9xbnSyJisGPA9kV" title="YouTube video player" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe>
+
+<div id="p">
+<p>
+Why is it so easy for them? Are they better parents? 
+Do they just not worry about every little detail? I've never known a gorilla to read and study carefully 
+seventeen books on bringing up baby gorillas. And they seem to know just what to do. They never worry about 
+spoiling their little gorilla babies. They never worry about not having enough time with them. Now, don't get 
+me wrong, I'd rather be human than a gorilla any day. Just imagine having to sit in a zoo. (Did you figure out 
+yet that while gorillas were on my mind, I could only find a picture of an elephant?)
+</p>
+
+</br>
+
+</div>
+<img id="b" class="bturn" src="beaver.jpg" alt="Beaver Image" title="Babson Beaver"/>
+
+<div class="moveme">
+
+	MOVE IT!!!
+</div>
+	
+  </body>
+</html>
