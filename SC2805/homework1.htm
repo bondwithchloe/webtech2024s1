@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title>Web Tech - Section 1 - HW1</title> <!-- change this - it is worth 1 point -->
+
+        <style>
+            h1{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: yellow;
+                margin-bottom: 0; margin-top: 50px;
+                margin-left: 200px; margin-right: 200px;
+            }
+
+            h3{
+                text-align: left;
+                font-family: Cambria, serif;
+                background-color: white;
+                padding: 4px;
+                max-width: 30%;
+            }
+
+            div#silver {
+                background-color: silver;
+                padding-left: 150px; padding-right: 150px;
+                padding-top: 25px; padding-bottom: 25px;
+                margin-top: 0; margin-bottom: 0;
+                margin-left: 200px; margin-right: 200px;
+            }
+
+            p{
+                font-family: default;
+                text-decoration: black;
+                padding-top: 20px;
+            }
+
+            img {
+                float: right;
+                margin-left: 5px;
+            }
+
+
+            table {
+                width: 50%;
+                margin: 0 auto; /* Centers the table on the page */
+                font-family: Arial, sans-serif; /* Sets the font family to Arial */
+                font-style: italic; /* Italicizes the font */
+                font-size: 12px; /* Sets the font size */
+                text-align: center; /* Centers the text in the table */
+                }
+
+                /* Style for the first column */
+                table td:first-child, table th:first-child {
+                background-color: blue; /* Sets the background color of the first column */
+                color: yellow; /* Sets the font color of the first column */
+                }
+
+                /* Style for the second column */
+                table td:last-child, table th:last-child {
+                background-color: darkorange; /* Sets the background color of the second column */
+                color: black; /* Sets the font color of the second column */
+                }
+
+                /* Ensure text is centered in each cell */
+                td, th {
+                text-align: center; /* Centers the text in table cells */
+            }
+
+
+        </style>
+        
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <h1>Web Tech - Spring 2024 - Homework One</h1>
+
+        <div id="silver">
+        
+            <p> 
+                <h3>What is a Table?</h3>
+            
+                    <!-- the image goes here as the first line of the paragraph -->     
+                    <map name="imagemap" id="hotspots">
+                        <area coords="6,10, 54,129" shape="rect" alt="Table" title="Table" href="https://en.wikipedia.org/wiki/Table_(information)" >
+                </map>
+
+                    <img src="table.jpg" usemap="#imagemap" alt="Table" title="Table"/>   
+                    A table is an arrangement of data in rows and columns, or possibly in a more 
+                    complex structure. Tables are widely used in communication, research, and data 
+                    analysis. Tables appear in print media, handwritten notes, computer software, 
+                    architectural ornamentation, traffic signs, and many other places. The precise 
+                    conventions and terminology for describing tables vary depending on the context. 
+                    Further, tables differ significantly in variety, structure, flexibility, notation, 
+                    representation and use.In books and technical articles, tables are typically presented 
+                    apart from the main text in numbered and captioned floating blocks.
+            
+                <h3>A Sample Table</h3>
+            </p> 
+            
+            <!-- build your sample table here -->
+            <Table>
+            <tr>
+                <td class="c1">My Work in Session 6</td>
+                <td class="c2"><a href="cs6inclass.htm">CS6 In Class</a></td>
+            </tr>
+            <tr>
+                <td class="c1">My Work in Session 7</td>
+                <td class="c2"><a href="cs7inclass.htm">CS7 In Class</a></td>
+            </tr>
+            <tr>
+                <td class="c1">My Work in Session 8</td>
+                <td class="c2"><a href="cs8inclass.htm">CS8 In Class</a></td>
+            </tr>
+            </Table>
+
+        </div>
+
+    </body>
+</html>
