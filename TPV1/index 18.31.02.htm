@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+	
+
+    <style>
+        /* Your styles go here */
+		body {
+			background-color: black;
+		}
+
+        div#banner {
+            background: url(thestar.jpg);
+            padding: 2%;
+			text-align: center;
+        }
+
+        h1#heading {
+            color: white;
+            text-align: center;
+            font-family: "'Fira Code', Consolas, 'Courier New', monospace";
+            font-weight: bold;
+			text-size-adjust: auto;
+			margin-bottom: 0;
+        }
+
+		h3#heading {
+			color: white;
+			text-align: center;
+			font-family: "'Fira Code', Consolas, 'Courier New', monospace";
+			text-size-adjust: auto;
+			margin-top: 0;
+			margin-bottom: 2;
+		}
+
+		.sociallinks {
+  			display: inline; /* Or you can use 'inline-block' if you need to specify dimensions or padding */
+  			margin-right: 10px; /* Adjust the spacing between the links */
+  			color: white; /* Or any other color you wish to use */
+			text-align: center;
+		}
+
+
+		.content {
+  			display: flex; /* This will arrange children (img and text-content) side by side */
+  			align-items: flex-start; /* Align items to the start of the container */
+ 			justify-content: flex-start; /* Align children to the start (left) of the container */
+  			padding: 20px; /* This adds space inside the borders of the content area */
+  			gap: 20px; /* This adds space between the img and the text-content */
+		}
+
+		.profilepic {
+  			flex: 0 0 auto; /* Do not grow, do not shrink, and be based on actual width of the image */
+  			width: 200px; /* Adjust width as needed */
+  			height: auto; /* Maintain the aspect ratio of the image */
+  			margin-right: 20px; /* Adds space to the right of the image */
+			margin-top: 100px;
+		}
+
+		.textcontent {
+  			flex: 1; /* Allows text content to fill up the remaining space */
+  			padding: 10px; /* Adds space inside the text container, if needed */
+			color: white;
+		}
+
+		.table {
+			text-align: center;
+			color: white;
+			td {border:2px solid white;}
+			margin-left: auto;
+			margin-right: auto;
+			table {font-family: arial; color:navy; text-align: center; 
+    width:70%; margin-left: auto; margin-right: auto; background-image: url(music.gif); 
+    margin-top: 2%; border-collapse: collapse;}
+			tr#r1 {background-color: gray; font-weight:bold;}
+			.c1{width:30%;}
+			.c2{width: 45%;}
+			caption {font-family: lucida handwriting; color: white; font-weight: bold; margin-bottom: 2%;}
+		}
+
+		.tableheading {
+			color: white;
+            text-align: center;
+            font-family: "'Fira Code', Consolas, 'Courier New', monospace";
+            font-weight: bold;
+			text-size-adjust: auto;
+			margin-bottom: 2;
+		}
+
+
+		.timecontent {
+			color: white;
+			text-align: center;
+
+		}
+
+		p {
+			color: white;
+		}
+
+
+        /* This is where I start my menu styles */
+        .topnav {
+            background-color: grey;
+            overflow: hidden;
+            font-family: Lucida Handwriting;
+        }
+
+        .topnav a {
+            float: left;
+            color: black;
+            display: block;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .active {
+            background-color: gray;
+            color: white;
+        }
+
+        .drpdwn {
+            float: left;
+            overflow: hidden;
+        }
+
+
+        .drpdwn .drpbtn {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 40px;
+            font-family: inherit;
+            background-color: inherit;
+            margin: 0;
+        }
+
+        .drpdwncontent {
+            position: absolute;
+            display: none;
+
+            background-color: rgb(255, 255, 255);
+            z-index: 1;
+        }
+
+        .drpdwn:hover .drpdwncontent {
+            display: block;
+        }
+
+
+        .drpdwncontent a {
+            float: none;
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+
+        .topnav a:hover,
+        .drpdwn:hover .drpbtn {
+            background-color: gray;
+            color: black;
+        }
+
+
+        .drpdwncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+		h2#about {
+			color: white;
+		}
+
+		h1#videotitle {
+			color: white;
+            text-align: center;
+            font-family: "'Fira Code', Consolas, 'Courier New', monospace";
+            font-weight: bold;
+			text-size-adjust: auto;
+			margin-bottom: 2;
+		}
+
+		.videocontainer {
+			display: flex;
+			justify-content: center;
+  			align-items: center;
+		}
+
+
+
+        @media screen and (max-width: 750px) {
+
+            .topnav a:not(:first-child),
+            .drpdwn .drpbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        /* Option + Shift + F to format the code above */
+
+        @media screen and (max-width: 750px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .drpdwn {
+                float: none;
+            }
+
+            .topnav.responsive .drpdwncontent {
+                position: relative;
+            }
+
+            .topnav.responsive .drpdwn .drpbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        /* This is where I style my Content */
+
+            .row {display:flex; flex-direction:row; }
+             .about {width:27%; margin:3%; text-align:justify;}
+
+        @media screen and (max-width:750px)
+            {
+                 .row{flex-direction:column;}
+                 .about{width:80%; margin-right:auto; margin-left:auto;}
+             }
+
+
+    </style>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+		<h3 id="heading">Co-Founder & CEO @BOND</h3>
+		<div class="sociallinks">
+			&nbsp; <a href="https://www.linkedin.com/in/chloesamaha/" class="sociallinks">LinkedIn</a> | &nbsp; &nbsp;
+			<a href="https://www.instagram.com/bondwithchloe/" class="sociallinks">Instagram</a> | &nbsp; &nbsp;
+			<a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=csamaha1@babson.edu" class="sociallinks">Mail</a> 
+
+		</div>
+    </div>
+    <!-- Below is My Menu Build Out -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm" class="active">Home</a>
+		<div class="drpdwn">
+            <a href="profes.htm" class="drpbtn">Professional</a>
+            <div class="drpdwncontent">
+                <a href="#">Founder</a>
+                <a href="#">Student</a>
+                <a href="#">Learnaholic</a>
+            </div>
+        </div>
+        <a href="personal.htm">Personal</a>
+		<a href="contactus.htm">Contact Us</a>
+		<a href="sitemap.htm">Sitemap</a>
+		<a href="credits.htm">Credits</a>
+        
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+    </div>
+
+		
+	<div class="content">
+		<img src="pilotlaunch.jpg" alt="Foundershot" title="Risk Taker Since '03" class="profilepic">
+		<div class="textcontent">
+
+		  <h1>About Me</h1>
+		   
+		  <p>
+			My mission is to promote a people-first mentality by sparking game-changing human connections in our virtual world. <br/> <br/>
+
+			With the massive shift to remote/hybrid workplaces, people have become *disconnected* from their co-workers & company culture. At BOND, we *reconnect* remote teams & rebuild unique online company cultures by sparking virtual water-cooler chats through a daily gamified BONDing question. <br/> <br/>
+			
+			I am pursuing a B.S. in Business Administration and Management with a concentration in Technology & Entrepreneurship at <a href="http://www.babson.edu" target="_blank">Babson College</a>. As a trilingual/multinational citizen, I strive to empower individuals & companies on a global scale. I thrive in high-performing environments characterized by intense competition and actively seek connections with fellow risk-takers who share my passions in entrepreneurship, gamification, AI, and the future of work. <br/> <br/>
+			
+			BONDing Fact: My favorite movie quote, "Just Keep Swimming" from Finding Nemo, serves as a personal mantra, reflecting my unwavering determination and resilience in facing adversity. 
+			</p>
+		  
+		</div>
+	</div>
+
+
+	   <!-- Start building your table right below this line-->
+	   <h1 class="tableheading">My 2024 Bucket List</h1>
+	<table class="table">
+  <!-- Table content goes here -->
+		<tr id="r1">
+			<td class="c1">Priority</td>
+			<td class="c2">Goal</td>
+			<td>Category</td>
+		</tr>
+		<tr>
+			<td class="c1">1</td>
+			<td class="c2">BOND is the #1 People Management Tool</td>
+			<td>Professional</td>
+		</tr>
+		<tr>
+			<td class="c1">2</td>
+			<td class="c2">Healthy Habits: Sleep >7.5hrs, Workout Daily, Eat Healthy</td>
+			<td>Personal</td>
+		</tr>
+		<tr>
+			<td class="c1">3</td>
+			<td class="c2">Build strong community of mentors & fellow high achievers</td>
+			<td>Personal & Professional</td>
+		</tr>
+		<tr>
+			<td class="c1">4</td>
+			<td class="c2">Get Skydiving B-License</td>
+			<td>Personal</td>
+		</tr>
+		<tr>
+			<td class="c1">5</td>
+			<td class="c2">Travel to 3 new countries</td>
+			<td>Personal</td>
+		</tr>
+	</table>
+	<br/><br/>
+
+	<h1 id="videotitle">Learn more about BOND</h1>
+	<div class="videocontainer">
+		<video width="320" height="240" controls>
+			<source src="/Users/chloesamaha/Downloads/Organize/demo-v3-2.mp4" type="video/mp4">
+	</div>
+	</video>
+	<br/><br/>
+
+	<audio autoplay loop muted>
+		<source src="/Users/chloesamaha/Desktop/BABSON/Junior Year/S'24/OIM3690-01/webtech/TPV1/AUDIO-2023-07-21-10-24-43.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	  
+	
+	<div class="timeline">
+		<div class="timecontent">
+			<h1>A glimpse of my life</h1>
+
+			<p>
+				2024<br/>
+				2023<br/>
+				2022<br/>
+				2021<br/>
+				2020<br/>
+				2019<br/>
+				2018<br/>
+				2017<br/>
+				2016<br/>
+				2015<br/>
+				2014<br/>
+				2013<br/>
+				2012<br/>
+				2011<br/>
+				2010<br/>
+				2009<br/>
+				2008<br/>
+				2007<br/>
+				2006<br/>
+				2005<br/>
+				2004<br/>
+				2003<br/>
+
+
+			</p>
+		</div>
+	</div>
+	
