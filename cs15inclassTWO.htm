@@ -30,30 +30,36 @@
                 {
                     alert("Please enter NUMERICAL values ONLY");
                 }
-                
-
-                n1 = parseFloat(myf.num1.value);
-                n2 = parseFloat(myf.num2.value);
-
-                if (y == "add")
-                {
-                    myf.res.value = n1 + n2;
-                }
-
-                else if (y == "sub")
-                {
-                    myf.res.value = n1 - n2;
-                }
-
-                else if (y == "mul")
-                {
-                    myf.res.value = n1 * n2;
-                }
 
                 else 
                 {
-                    myf.res.value = n1 / n2;
+                    n1 = parseFloat(n1);
+                    n2 = parseFloat(n2);
+
+                    if (y == "add")
+                    {
+                        myf.res.value = n1 + n2;
+                    }
+
+                    else if (y == "sub")
+                    {
+                        myf.res.value = n1 - n2;
+                    }
+
+                    else if (y == "mul")
+                    {
+                        myf.res.value = n1 * n2;
+                    }
+
+                    else 
+                    {
+                        myf.res.value = n1 / n2;
+                    }
+
                 }
+                
+
+                
             }
              
         
