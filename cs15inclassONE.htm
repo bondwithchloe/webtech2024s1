@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Passing Arguments to Functions.</title>
+        <!-- Don't worry about the styles. I just added them to make the page look better -->
+        <style type="text/css">
+            h1 {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            h1, div, h2 {
+                text-align: center;
+            }
+
+           
+
+            img#justFrame {border:2px ridge navy; display:block; margin:auto; width:200px; margin-bottom:100px;}
+            p {text-align:center;}
+            button {width:100px; height:30px; margin-right:20px; margin-left:20px;}
+            
+            
+        </style>
+
+        <script type="text/javascript">
+          /* This function is for the leaf with arguments */
+          function showImage(x)
+          {
+            var myimg;
+            myimg = document.getElementById("justFrame");
+            // myimg.src = x+".jpg"
+
+			if (x == "S")
+			{
+				myimg.src = "shamrock.jpg";
+                myimg.alt = "Shamrock Image";
+                myimg.title = "Shiny Shamrock";
+			}
+
+            else if (x == "C")
+			{
+				myimg.src = "clover.jpg";
+                myimg.alt = "Clover Image";
+                myimg.title = "Clever Clover";
+			}
+
+			else if (x == "T")
+            {
+                myimg.src = "thyme.jpg";
+                myimg.alt = "Thyme Image";
+                myimg.title = "Tricky Thyme";
+            }
+
+            else 
+            {
+                myimg.src = "maple.jpg";
+                myimg.alt = "Maple Image";
+                myimg.title = "Majestic Maple";
+            }
+
+        }
+            
+        
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1> Passing Arguments to Functions</h1>
+        <h2> Example Situation One</h2>
+        <img id="justFrame" src="" alt="Show Image Here" title=""/>
+        <p>
+          
+          <button id="S" onclick="showImage(this.id)" >Shamrock</button>
+          <button id="C" onclick="showImage(this.id)">Clover</button>
+          <button id="T" onclick="showImage(this.id)">Thyme</button>
+          <button id="M" onclick="showImage(this.id)">Maple</button>
+        </p>
+    </body>
+</html>
