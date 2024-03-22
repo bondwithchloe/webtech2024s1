@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title></title>
+
+	<style>
+	/* Your styles go here */
+    h1, h2 {font-family:Cursive; color:Navy; text-align:center;}    
+    form {background-color:aquamarine; color:black; font-family:Arial;
+              padding-left:5%; padding-top:1%; padding-bottom:1%;
+            width:40%; margin:5% auto;}
+        input[type="submit"], input[type="reset"] {height:30px; background-color:yellow;}
+        ol {font-size:1em; font-weight:bold; color: red}
+	
+	</style>
+	<script type="text/javascript">
+    function showValue() 
+    {
+      event.preventDefault();
+      var myf, myeuro;
+      myf = document.getElementById("myform");
+      myeuro = myf.euro.value;
+      myf.dollar.value = parseFloat(myeuro)*1.09;
+
+      if ((myeuro =="") && (mydollar==""))
+      {
+        alert("Please enter a value in one of the fields");
+      }
+      else if ((myeuro !="") && (mydollar!=""))
+      {
+        alert("Please enter only one of the two values");
+      }
+      else 
+      {
+        if ((myeuro =="") && (mydollar !=""))
+        {
+          if(isNaN(mydollar)==true)
+          {
+            alert("Please enter a numerical value for euro");
+          }
+          else 
+          {
+            myf.euro.value = parseFloat(mydollar)/1.09;
+          }
+        }
+        else 
+        {
+          if ((mydollar =="") && (myeuro !=""))
+          {
+          if(isNaN(myeuro)==true)
+          {
+            alert("Please enter a numerical value for dollar");
+          }
+          else 
+          {
+            myf.dollar.value = parseFloat(myeuro)*1.09;
+          }
+          }
+        }
+      }
+
+
+
+    }
+		
+	
+
+	</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Dollar/Euro or Euro/Dollar Converter</h1>
+	<form id="myform" action="" method="POST">
+        <p>
+            Euro Value: <input type="text" name="euro" size="10" placeholder="Euro Here"/>
+        </p>
+        <p>
+            Dollar Value: <input type="text" name="dollar" size="10" placeholder="Dollars Here"/>
+        </p>
+        <p>
+            <input onclick="showValue()" type="submit" name="submit" value="Convert"/> &nbsp; &nbsp;
+            <input type="reset" name="reset" value="Clear"/>
+        </p>
+
+
+
+    </form>
+    <div>
+      <h2> One Euro equals 1.09 Dollars.</h2>
+      <h2> For the First Problem, assume that the following hold</h2>
+    <p>
+      <ol>
+        <li> Assume that the user will always enter a value</li>
+        <li> Assume that the user will always enter the right value</li>
+        <li> Assume that the user will only enter Euro value</li>
+      </ol>
+    </p>
+
+    <h2> For the Second Problem, relax the 3rd assumption.</h2>
+
+    <h2> The third step, we will do this in two sub-steps.<br/>
+      We will relax the second assumption <br/>
+      Then we will relax the first assumption.
+    </h2>
+    </div>
+  </body>
+</html>
