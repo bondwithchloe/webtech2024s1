@@ -57,9 +57,23 @@
                function changeImage()
                {
                 var myimg = document.getElementById("img3");
-                myimg.src = "ships.jpg"
-                myimg.alt = "Ships"
-                myimg.title ="Ships are sailing..."
+                if (myimg.src.match("planes.jpg") == "planes.jpg")
+                {
+                    myimg.src = "ships.jpg";
+                    myimg.alt = "Ships Image";
+                    myimg.title = "Ships Ahoy";
+                }
+                else 
+                {
+                    myimg.src = "planes.jpg";
+                    myimg.alt = "Planes Image";
+                    myimg.title = "Flying High";
+                }
+
+
+                // myimg.src = "ships.jpg"
+                // myimg.alt = "Ships"
+                // myimg.title ="Ships are sailing..."
                }
            
         </script>
