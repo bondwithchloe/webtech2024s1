@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+	/* Your styles go here */
+    h1 {font-family:Arial; font-style:italic; text-align:center;}
+    h2 {font-family:Arial; text-decoration:underline;}
+    img {display:block; margin-right:auto; margin-left:auto;}
+    div {height:250px; width:70%; margin-right:auto; 
+         margin-left:auto; border: 1px solid black;
+         text-align:center;}
+    button {height:50px;}
+    body {background-color:lightslategray;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+     // Problem 1
+     function increaseSize()
+     {
+          var myimg;
+          myimg = document.getElementById("myimage");
+          if (myimg.width == "400")
+          {
+               myimg.width = myimg.width * 1.2;
+          }
+          else 
+          {
+               myimg.width = myimg.width / 1.2;
+          }
+     }
+
+
+     // Problem 2
+     function changeCol(x)
+     {
+          var mydiv;
+          mydiv = document.getElementById("a");
+          mydiv.style.backgroundColor = x;
+     }
+
+     // Problem 3
+     function chgTitle(x)
+    {
+      var mytitle;
+      mytitle = document.getElementById("title");
+      if ( x == "changeone")
+      {
+          mytitle.innerHTML = " Web Tech is Great ";
+      }
+      else if ( x == "changetwo")
+      {
+          mytitle.innerHTML = " Web Tech Sucks ";
+      }
+      else if (x == "changethree")
+      {
+          mytitle.innerHTML = " Web Tech is Bearable ";
+      }
+      else
+      {
+          mytitle.innerHTML = " Please Change This Title ";
+      }
+     
+      
+    }
+        
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Practice with JavaScript</h1>
+	<hr/>
+	<h2> Problem 1</h2>
+	<!-- When you click on the image increase its width by 20% - 
+	     and when you click again, return it to original size -->
+	
+		<img id="myimage" onclick="increaseSize()" src="AlaskaLakeR.jpg" alt="Alaska Lake" title="Click Me" width="400" id="pone" onclick=""/> 
+
+    <hr/>
+    <h2> Problem 2</h2>
+    <!-- There are 4 buttons below. Each has a color specified 
+         as the text label. The buttons are enclosed in a div
+         - the div has a border to show you where the div is. 
+         Please change the color of the div depending on which
+         button is clicked.-->
+
+         <div id="a">
+
+            <button id="LightBlue" onclick="changeCol(this.id)">LightBlue</button>
+            <button id="LightGreen" onclick="changeCol(this.id)">LightGreen</button>
+            <button id="Magenta" onclick="changeCol(this.id)">Magenta</button>
+            <button id="LightPink" onclick="changeCol(this.id)">LightPink</button>
+
+         </div>
+
+    <hr/>
+    <h2> Problem 3</h2>
+    <!-- You are given a "title" in the h1 tag below. The title
+         now has a place holder text). There are 3 text options given. 
+         When the user clicks on any of the 3 options, please 
+         change the title in the h1 tag to the corresponding
+         text. -->
+
+         <h1 id="title" onclick="chgTitle(this.id)"> This is the title that should change. </h1>
+
+         <h3 id="changeone" onclick="chgTitle(this.id)"> Web Tech is Great </h3>
+         <h3 id="changetwo" onclick="chgTitle(this.id)"> Web Tech Sucks </h3>
+         <h3 id="changethree" onclick="chgTitle(this.id)"> Web Tech is Bearable </h3>
+
+    <hr/>
+	
+  </body>
+</html>
