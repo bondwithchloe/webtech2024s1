@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <title>Homework 3 - processing forms</title>
+
+    <style>
+        /* Your styles go here */
+        form {background-color:silver; font-family:Arial; color:Navy;
+        padding-left:50px; padding-top:20px; padding-bottom:20px;
+        margin-right:auto; margin-left:auto; width:60%;}
+        .but {width:200px; height:60px; background-color:magenta; color:black;}
+        p#desc {margin:50px 200px; font-family:cursive; }
+        h3 {font-family:lucida handwriting; font-size:3em; text-align:center;}
+    </style>
+    
+    <script>
+
+
+        function calculateAmount() {
+            var product = document.getElementById('product').value.toLowerCase();
+            var quantity = document.getElementById('quantity').value;
+            var amountDueField = document.getElementById('amountDue');
+
+            if (product === 'milk' || product === 'apple' || product === 'fish') {
+                if (isNaN(quantity) || quantity === '' || Number(quantity) < 0) {
+                    alert('Please enter a valid non-negative numeric quantity.');
+                    return;
+                }
+                var pricePerUnit = (product === 'milk') ? 3.50 : (product === 'apple') ? 0.99 : 5.99;
+                var amountDue = pricePerUnit * quantity;
+                amountDueField.value = '$' + amountDue.toFixed(2);
+            } else {
+                alert('Please enter a valid product (Milk, Apple, or Fish).');
+            }
+        }
+    </script>
+  </head>
+
+  <body>
+    <h3> Homework 3</h3>
+    <p id="desc">
+        The form given below has 3 fields. Let us assume that the user will type in
+    the name of one of 3 products: Milk, Apple, or Fish. The user may enter these 
+    using any mix of cases, so be aware. You need to check to ensure that the user
+    enters a value. If it is not one of these 3, let the user know. 
+    Then the user will enter a quantity. You need to check to ensure that a quantity is entered 
+	(you may assume that 0 is a valid quality) and that the value is numeric. 
+    Once validated, use the following costs - 1 bottle of milk is $3.50; one 
+    apple is $0.99 and one pound of fish is $5.99 - and show the amount owed
+    in the third field. All of this should be done when the appropriate 
+    button is pressed. The amount must be shown with 2 decimal places and prefixed with
+	a $ (dollar) sign.  
+    </p>
+    <form id="f" action="" method="POST" onsubmit="event.preventDefault(); calculateAmount();">
+        <p>
+            <input type="text" id="product" name="product" size="20" placeholder="Enter product..."/>
+            &nbsp; &nbsp;&nbsp;
+            <input type="text" id="quantity" name="quantity" size="20" placeholder="Enter quantity.."/>
+        </p>
+        <p>
+            <input type="text" id="amountDue" name="AmtDue" size="20" placeholder="show amount due" readonly/>
+        </p>
+        <p>
+            <input class="but" type="submit" name="submit" value="What Do I Owe"/>
+            &nbsp; &nbsp;&nbsp;
+            <input class="but" type="reset" name="reset" value="Clear All"/>  
+        </p>
+    </form>
+
+    <p>
+    </br></br>
+        I needed to prompt Chat GPT 4.0 (I personally subscribe to it. I think it's one of the best investments I've ever made) twice to get this code. </br>
+        Prompt 1: Code a form on Visual Studio Code using HTML and JavaScript, I've attached a file with the code & instructions. I want another version of this code. IMPORTANT Make sure it meets all requirements and instructions. </br>
+        Prompt 2: It's not fully working. Please revise the function</br>
+    </br> </br>
+    
+    Reflection: </br>
+    What we learn in class and Chat are very different outputs. I think that there are pros & cons for both. To be completely honest this isn't the first time I've used Chat, I had to resort to it a lot when doing TPV1. 
+    Both codes currently yield the same results though, just different routes to get there. The GPT route was much more concise and from a developer standpoint (saved me a bunch of time). Negative: I don't fully understand the code. I think it is incredibly important for beginners to not have access to it because it makes us lazy. I feel like once you are intermediate it's a game changer and then once you become an expert well, you can create the AI. haha.
+    The homework assignment took me around 1hr15min to complete, and ChatGPT got it done in less than 5 minutes.
+    My JavaScript took 42 lines, ChatGPT's JavaScript was only 16 lines long. It just is a more advanced developer than me that is why. </br>
+    I think this is incredibly exciting for our generation because it sets the bar high for what we consider a great skillset. 
+    I believe all busy work will be replaced by AI and we will have more time to focus on things that will have larger impact. I think in person collaboration and brainstorming will be huge and then AI will do the notetaking, scheduling, sending out emails for us. 
+    More time to enjoy life!
+   
+    </p>
+    
+  </body>
+</html>
