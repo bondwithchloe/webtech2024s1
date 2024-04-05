@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Change the Title, Please</title>
+	<style>
+        p, h3 {text-align:center;}
+        img {width:30%;}
+        button {width:150px; height:40px; 
+                background-color:green;; font-family:arial; 
+                color:yellow;}
+        div#b{text-align:center;}
+	</style>
+    
+    
+    <script type="text/javascript">
+
+        var mypics = new Array ("tiger5.jpg", "tiger6.jpg", "tiger7.jpg", "tiger8.jpg");
+        var mytext = new Array ("This is Web Tech", "This is fun", "Teaches me Everythin", "Under the Sun");
+        var mycols = new Array ("blue", "green", "yellow", "pink", "magenta");
+        var c, d;
+        c=0;
+        d=0;
+
+
+        function showSlides()
+        {
+            const myimg = document.getElementById("daimg");
+            const mycap = document.getElementById("h");
+            myimg.src = mypics[c];
+            mycap.innerHTML = mytext[c];
+            myimg.style.borderColor = mycols[d];
+            ++c; 
+            // same as c= c+1;
+            if (c > mypics.length -1)
+            {
+                c=0;
+            }
+            ++d;
+            if (d > mycols.length-1)
+            {
+                d=0;
+            }
+            setTimeout ("showSlides()", 1000);
+
+        }
+        
+    </script>
+</head>
+<body onload="showSlides()">
+    <p>
+    
+    <img id="daimg" src="tiger5.jpg" alt="Slide Show of Tigers" title="Tigers"/>
+    
+    </p>
+    <h3 id="h"></h3>
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+    <div id="b">
+        <button>Click to stop/resume</button>
+    </div>
+     
+</body>
+</html>
