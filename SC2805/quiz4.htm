@@ -1,103 +1,79 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tally the Total</title>
+<style type="text/css">
+    h1 {
+        text-align: center;
+    }
+    form {
+        font-family: Arial;
+        color:blueviolet;
+        margin-right:300px;
+        padding-left:100px;
+    }
+    table {
+        border:1px solid black;
+        padding:35px 10px 35px 50px;
+        margin-left:40px;
+        background-color:beige;
+        color:blueviolet
+    }
+    .one, .two {width:32%;}
+    .three {width:36%;}
 
-	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-	    <title>Q4.htm</title>
-        <style type="text/css">
-            h1 {
-                text-align: center;
-            }
-            form {
-                font-family: Arial;
-                color:blueviolet;
-                margin-right:300px;
-                padding-left:100px;
-            }
-            table {
-                border:1px solid black;
-                padding:35px 10px 35px 50px;
-                margin-left:40px;
-                background-color:beige;
-                color:blueviolet
-            }
-            .one, .two {width:32%;}
-            .three {width:36%;}
-        
-            p {
-                width: 80%;
-                font-family: Arial;
-                color:Navy;
-                font-size: 16pt;
-                margin-left:300px; 
-            }
-            select,button, input {
-                font-size: 12pt;
-            }
-            span{font-style:italic; font-weight:bold; text-decoration:underline;}
-            ul li {list-style-type:square; font-family:Arial; margin-left:100px;}
-        </style>
-        
-        
-        
-        <script type="text/javascript">
-            function computeT()
-            {
-                event.preventDefault();
-                var myf = document.getElementById("f");
-                var product = myf.product.value;
-                var quantity = parseInt(myf.quantity.value);
-                var result = document.getElementById("Result")
-                
-                if ((product =="XXX"))
-                {
-                    alert("Please select product");
-                }
-                else if ((quantity == "XXX"))
-                {
-                    alert("Please select quantity");
-                }
+    p {
+        width: 80%;
+        font-family: Arial;
+        color:Navy;
+        font-size: 16pt;
+        margin-left:300px; 
+    }
+    select, button, input {
+        font-size: 12pt;
+    }
+    span{font-style:italic; font-weight:bold; text-decoration:underline;}
+    ul li {list-style-type:square; font-family:Arial; margin-left:100px;}
+</style>
 
-                else {
-                    if (product == "Shirt")
-                    {
-                        price = prompt ("How much would you pay for the shirt?");
-                        price = parseFloat(price);
-                        if ((price < 12.99) || (price > 24.99))
-                        {
-                            alert ("Please enter a value between $12.99 and $24.99");
-                        }
-                        else {
-                            result = "$" + (price * quantity);
-                        }
-                    }
-                    else if (product == "Pant")
-                    {
-                        price = prompt ("How much would you pay for the pant?");
-                        price = parseFloat(price);
-                        if ((price < 12.99) || (price > 24.99))
-                        {
-                            alert ("Please enter a value between $12.99 and $24.99");
-                        }
-                        else {
-                            result = "$" + (price * quantity);
-                        }
-                    }
+<script type="text/javascript">
+function computeT() {
+    var productSelect = document.getElementById('productSelect');
+    var quantitySelect = document.getElementById('quantitySelect');
+    var totalInput = document.getElementById('totalInput');
+    var product = productSelect.value;
+    var quantity = quantitySelect.value;
 
-                }
-            }
-                        
-            
-            
+    if (product == "XXX") {
+        alert("Please select product");
+        return;
+    } else if (quantity == "XXX") {
+        alert("Please select quantity");
+        return;
+    }
 
-        </script>
-        
-    </head>
+    var pricePrompt = "What are you willing to pay for the " + product + "?";
+    var price = parseFloat(prompt(pricePrompt));
 
-    <body>
-	    <!-- Your HTML goes here -->
+    if (isNaN(price) || price < 12.99 || price > 24.99) {
+        alert("Please enter a value between $12.99 and $24.99");
+        return;
+    }
 
-        <h1> Tally the Total (25 points) </h1>
+    var total = price * parseInt(quantity);
+    totalInput.value = "$" + total.toFixed(2);
+}
+
+function clearForm() {
+    document.getElementById('productSelect').selectedIndex = 0;
+    document.getElementById('quantitySelect').selectedIndex = 0;
+    document.getElementById('totalInput').value = "";
+}
+</script>
+</head>
+<body>
+<h1> Tally the Total (25 points) </h1>
         <p> 
             <ul>
                 <li>This is a table with a form.</li> 
@@ -122,40 +98,37 @@
             </li>
             </ul>
         </p>
-       <form id="f" action="" method="post">
-            <table>
-                 <tr>
-                     <td class="one">
-                    <select name="product">
-                        <option value="XXX">Select Product</option>
-                        <option value="Shirt">Shirt</option>
-                        <option value="Pant">Pant</option>
-                    </select> 
-                     </td>
-                     <td class="two">
-                     <select name="quantity">
-                        <option value="XXX">Select Quantity</option>
-                        <option value="10">10 Units</option>
-                        <option value="20">20 Units</option>
-                        <option value="30">30 Units</option>
-                    </select>
-                     </td>
-                     <td class="three">
-                         Total: <input type="text" name="total" size="10" />
-                     </td>
-                </tr>
-                <tr>
-                    <td colspan="3">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td colspan="3"><button onclick="computeT()">Compute</button>
-                    <input type="reset" name="reset" value="Clear"/></td>
 
-                </tr>
-           </table>
-         </form>
-       
-   
-    
-    </body>
+<form id="f">
+    <table>
+        <tr>
+            <td class="one">
+                <select id="productSelect" name="product">
+                    <option value="XXX">Select Product</option>
+                    <option value="Shirt">Shirt</option>
+                    <option value="Pant">Pant</option>
+                </select>
+            </td>
+            <td class="two">
+                <select id="quantitySelect" name="quantity">
+                    <option value="XXX">Select Quantity</option>
+                    <option value="10">10 Units</option>
+                    <option value="20">20 Units</option>
+                    <option value="30">30 Units</option>
+                </select>
+            </td>
+            <td class="three">
+                Total: <input type="text" id="totalInput" size="10" readonly />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button type="button" onclick="computeT()">Compute</button>
+                <button type="button" onclick="clearForm()">Clear</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
 </html>
