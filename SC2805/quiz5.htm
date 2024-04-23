@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title></title>
+
+	<style>
+	/* Your styles go here */
+	form{font-family:Arial; font-size:large; color:navy; background-color:darkkhaki; 
+    margin-right:auto; margin-left:auto; padding-left:2%; width:70%;
+    padding-top:1%; padding-bottom:1%;}
+    h1 {font-family:Arial; text-align:center; font-weight:bold; font-size:large;}
+    span {font-size:small; font-family:sans-serif;}
+    p#inst {margin-left:100px; margin-right:100px; color:navy; font-family:sans serif;}
+	
+	</style>
+	
+	
+	<script type="text/javascript">	
+        
+        function calculateAmount() 
+        {
+            const priceKindOfBlue = 64.99;
+            const priceLoveSupreme = 54.99;
+            
+            event.preventDefault();
+            var myform, album, quantity, cost;
+            album = document.getElementById('albumInput').value;
+            quantity = document.getElementById('quantityInput').value;
+            cost = 0;
+
+            if (album != 'Kind of Blue' && album != 'Love Supreme') 
+            {
+                alert('Please select one of the two albums listed.');
+            }
+    
+            if (quantity == '' || isNaN(quantity) || quantity < 0) 
+            {
+                alert('Please enter a valid, non-negative number for quantity.');
+            }
+            
+            var quantity = parseFloat(quantity, 10);
+            if (album == 'Kind of Blue') 
+            {
+                cost = priceKindOfBlue * quantity;
+                if (quantity > 2) cost *= 0.85;
+            } 
+            else {
+                cost = priceLoveSupreme * quantity;
+                if (quantity > 2) cost *= 0.80;
+            }           
+        
+            document.getElementById('amountOwed').innerText = '$' + cost.toFixed(2);
+        }
+	
+	</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Quiz 5 (25 points) - 23/Apr/2024 </h1>
+
+    <p id="inst">
+        You are given a form. The user can choose to buy either "Kind of Blue" or "Love Supreme"
+        album. The price of each is given to you. The user will then choose a quantity.
+        
+        The function should activate when "Show Amount" is clicked. 
+
+        (1) Make sure an album is chosen. Make sure that the album chosen is one of 
+        the two albums listed.
+
+        (2) The quantity entered cannot be empty, must be numerical, 
+        and must be non-negative.
+
+        (3) If the user buys more than 2 albums, discount the amount as shown in 
+        the form. If not, do not discount the amount. 
+
+        (4) Depending on the album purchased and the quantity, compute the amount owed.
+        Show it with $ sign and 2 decimal places.
+
+
+    </p>
+
+	<form id="myform" method="POST" action="">
+		<p>
+			Enter the album you desire to purchase: &nbsp;<br/>
+            <span>Kind of Blue is $64.99 and Love Supreme is $54.99. </span><br/>
+			<input id="albumInput" type="text" name="album" size="65" placeholder="Can be one of (a) Kind of Blue (Miles Davis) or (b) Love Supreme (John Coltrane)"/>
+		</p>
+
+        <p>
+            How many would you like: &nbsp; 
+            <span> OFFER - Buy more than 2 and recieve 15% off Kind of Blue and 20% off Love Supreme.</span>
+            <input id="quantityInput" type="text" name="numofalbums" size="10" placeholder="Quantity"/>
+        </p>
+
+        <p>
+            Here is how much you owe: &nbsp;
+            <input id="amountOwed" type="text" name="result" size="15" placeholder="Show Amt Here"/>
+        </p>
+
+        <p>
+            <input onclick="calculateAmount()" type="submit" name="submit" value="Show Amount"/> &nbsp; &nbsp;
+            <input type="reset" name="reset" value="Clear Form"/>
+        </p>
+
+	</form>
+		
+	
+	
+  </body>
+</html>

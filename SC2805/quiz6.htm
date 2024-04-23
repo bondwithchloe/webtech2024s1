@@ -1,0 +1,80 @@
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Quiz 6 - Spring 2024</title>
+
+	<style>
+	/* Your styles go here */
+
+	h1 {font-family:Arial; font-size:large; text-align:center; color:Navy;}
+	div#box {height:75px; width:75px; background-color:red; position:absolute;
+        bottom:100px; left:100px;}
+	p#inst {font-family:Arial; font-size:large; color:navy; font-weight:bold;}
+	
+	
+	</style>
+	
+	
+	<script type="text/javascript">	
+   var pos = 100;
+   var boxcontrol, box;
+   box = 0;
+   function moveBox()
+   
+	{
+		mybox = document.getElementById("box");
+		mybox.style.bottom = pos + "px";
+		pos = pos + 10;
+
+		box = 1;
+		boxcontrol = setTimeout("moveBox()", 10);
+
+		if (pos > 1200)
+		{
+			pos = 20;
+		}
+
+	}
+
+	function startstop()
+	{
+		if (box == 1)
+		{
+			clearTimeout(boxcontrol);
+			box = 0;
+		}
+
+		else 
+		{
+			box = setTimeout("moveBox()", 10)
+		}
+	}
+	
+	
+	</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Quiz 6 - 25 points - Spring 2024 </h1>
+
+    <p id="inst">
+        Instructions to be given in class. Easier to see it
+        instead of reading verbose text. 
+    </p>
+
+	<div id="box">
+
+		Animate Me!!
+
+	</div>
+
+	<button onclick="startstop()">Click to go up</button>
+		
+	
+	
+  </body>
+</html>
