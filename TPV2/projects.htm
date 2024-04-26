@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* Main Content Styles */
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #242424;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px;
+    }
+
+    .text-section {
+        flex: 1;
+        margin-top: 0px;
+    }
+
+    .image-section {
+        flex-shrink: 0;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    #profilepic {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .main-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-section,
+        .image-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-section {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Featured Styles */
+    .featured-section {
+        display: flex;
+        justify-content: space-between; /* Aligns children with space between at the main axis */
+        flex-wrap: wrap;
+        background-color: #242424;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px; /* Matching max-width with .main-content for alignment */
+    }
+
+    .featured-item {
+        flex: 1 1 calc(33.333% - 40px); /* Adjusting the basis to account for margin */
+        max-width: calc(33.333% - 40px);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #2e2e2e;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .featured-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .featured-section h2 {
+        color: white;
+        text-align: left; 
+        width: 100%;
+    }
+
+    .featured-item h3,
+    .featured-item p,
+    .featured-item a {
+        color: white;
+    }
+
+    /* Newsletter Subscription Styles */
+    .newsletter-subscription {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        background-color: #242424; 
+        padding: 20px; 
+        margin: 20px auto; 
+        border-radius: 10px; 
+        max-width: 1200px; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    .newsletter-subscription h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%; 
+        color: white; 
+    }
+
+    #newsletter-form {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #newsletter-form input[type="email"] {
+        flex-grow: 1; 
+        padding: 10px;
+        border: 1px solid #2e2e2e; 
+        border-radius: 5px; 
+        margin-right: 10px; 
+    }
+
+    #newsletter-form button {
+        flex-grow: 1; 
+        padding: 10px 20px;
+        border: 1px solid #2e2e2e; 
+        background-color: #2e2e2e; 
+        color: white; 
+        border-radius: 5px; 
+        cursor: pointer;
+        white-space: nowrap; 
+    }
+
+    #newsletter-form button,
+    #newsletter-form input[type="email"] {
+        height: 40px; 
+    }
+
+    @media (max-width: 768px) {
+        .newsletter-subscription {
+            padding: 20px; 
+        }
+
+        #newsletter-form {
+            flex-direction: column; 
+            gap: 20px; 
+            width: calc(100% - 40px); 
+        }
+        
+        #newsletter-form input[type="email"],
+        #newsletter-form button {
+            width: 100%; 
+        }
+    }
+
+
+
+
+</style>
+
+<body>
+    <!-- Page Header -->
+    <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+            <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+            <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+            <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- BOND -->
+    <div class="main-content">
+        <div class="text-section">
+            <h2>BOND</h2>
+            <p>
+                The Salesforce for Managers <br/><br/>
+                We are creating a baseline LLM trained on leadership/management data whose specific purpose is to coach team leaders to understand the human behind their co-workers. <br/><br/>
+                We collect data on individual team members through our built employee engagement app and continuously customize every team’s model with their unique data. <br/><br/>
+                Through our unified platform (Admin Dashboard) managers can better understand their team (Who they are as people? And what can they do to help them perform best on this team?) <br/><br/> 
+            </p>
+        </div>
+        <div class="image-section">
+            <img id="profilepic" src="bond.jpg" alt="BOND" />
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="text-section">
+            <h2>Beirut Biomimics</h2>
+            <p>
+                8 high school students studying nature's genius. <br/><br/>
+                I founded the Beirut Biomimics in high school. A leading pioneering research project to enhance solar panel designs using Biomimicry, pushing the envelope of renewable energy technology. <br/><br/> 
+                We successfully presented our research at the inaugural World Biodiversity Forum in Davos, elevating Lebanon's presence on the global environmental stage. Our paper received extensive media coverage across Lebanese and European outlets, spotlighting the innovative approach to solar energy in TV segments and newspaper articles. <br/><br/>
+                
+            </p>
+        </div>
+        <div class="image-section">
+            <img id="profilepic" src="biomimics.jpg" alt="beirut biomimics" />
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="text-section">
+            <h2>Impossible Lebanon Challenge</h2>
+            <p>
+                Nationwide High School Essay Competition <br/><br/>
+                At 16, I launched the Impossible Lebanon Challenge, a competition that sparked a wave of youthful ingenuity across Lebanon.<br/><br/>
+                We raised $15,000 in prizes, to inspire the youth to take initiative and try to innovate solutions to what they believed to be our country's most pressing problems. <br/><br/>
+                In just three months, Ghassan transformed waste into energy with a pioneering biogarden, Chloe broke the silence around mental health with “Time to Talk Lebanon,” and Jason turned composting into an art form, inspired by the natural efficiency of ants. <br/><br/>
+                This was more than a competition; it was the ignition of hope and action, seeding a future where Lebanese youth could lead the charge in innovation.
+            </p>
+        </div>
+        <div class="image-section">
+            <img id="profilepic" src="lebanon.jpg" alt="impossible lebanon" />
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

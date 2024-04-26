@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - Hobbies</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    /* Main Content Styles */
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #242424;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px;
+    }
+
+    #hobbies {
+        background-color: #1a1a1a; /* Dark background for hobby section */
+        color: #fff; /* Light text color for readability */
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1000px; /* Adjust based on layout preference */
+    }
+
+    .hobby h3 {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .details {
+        border-top: 1px solid #333; /* A subtle line to separate details */
+        padding: 20px 0;
+        display: none; /* Start off hidden */
+    }
+
+    .details img {
+        width: 100%; /* Full width within container */
+        max-width: 400px; /* Maximum width for the images */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners for images */
+        margin-bottom: 20px;
+    }
+
+    button.toggle {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+
+    button.toggle:hover {
+        background-color: #555;
+    }
+
+</style>
+
+<body>
+    <!-- Page Header -->
+     <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+                <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+                <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+    
+    <!-- Style for Hobbies -->
+    <div id="hobbies">
+        <h2>My Hobbies</h2>
+            
+        <div class="hobby">
+            <h3>Community</h3>
+            <p>At college, I led the #1 entrepreneurial community on campus, eTower.org...</p>
+            <button class="toggle" data-target="#communityDetails">More about community</button>
+            <div id="communityDetails" class="details" style="display: none;">
+                <!-- Insert leadership related content and image -->
+                <p>
+                    Community: Leading the number one entrepreneurial community on campus, eTower.org, was a crash course in leadership for me. 
+                    I learned the best leadership lesson ever: servant leadership. Your role as a leader is to listen to the needs of your team and respond efficiently. 
+                    We were more than a team—we became a family. Each challenge we faced taught me about resilience, strategy, and the importance of a shared mission, vision and core values.
+                </p>
+                <img src="etower.jpg" alt="etower">
+            </div>
+        </div>
+
+        <div class="hobby">
+            <h3>Music</h3>
+            <p>I started with piano, which unlocked the world of music for me...</p>
+            <button class="toggle" data-target="#musicDetails">More about music</button>
+            <div id="musicDetails" class="details" style="display: none;">
+                    <!-- Insert music related content and images -->
+                    <p>
+                        Music: Reshaped my worldview. A single note can evoke a scent, a surge of emotion, or even a vivid memory. 
+                        It's become my mode of self-expression, my retreat for relaxation, and my tool for tapping into and conveying deep emotions. 
+                        More than anything, music is my way of bringing people together, creating a shared experience out of thin air. 
+                        Whether it's the familiar chords on my guitar or the steady pulse of the drums, each instrument has turned music into a universal language that speaks directly from my soul into people's hearts.
+                    </p>
+                    <img src="guitar.jpg" alt="music">
+            </div>
+        </div>
+
+        <div class="hobby">
+            <h3>Sports</h3>
+            <p>I've always been incredibly sporty...</p>
+            <button class="toggle" data-target="#sportsDetails">More about sports</button>
+            <div id="sportsDetails" class="details" style="display: none;">
+                    <!-- Insert sports related content and images -->
+                <p>
+                    Competitiveness courses through me; I live to push my limits and excel. 
+                    My journey began with skiing and tennis, and as I grew, so did my repertoire—sailing, soccer rugby, and now skydiving and yoga have joined the ranks. 
+                    With each new sport, I dive in headfirst, fueled by a drive to be the best version of myself. 
+                    It's not just about winning; it's about the thrill of mastering new skills and the satisfaction of surpassing my previous bests. 
+                    Each sport is a new chapter in my book of personal achievements, a testament to my love for challenge and growth.
+                </p>
+                <img src="sky.jpg" alt="sports">
+            </div>
+        </div>
+
+        <div class="hobby">
+            <h3>Family</h3>
+            <p>My family and I are a massive builder family...</p>
+            <button class="toggle" data-target="#buildingDetails">More about my family</button>
+            <div id="buildingDetails" class="details" style="display: none;">
+                    <!-- Insert building and games related content and images -->
+                <p>
+                    Family: My family loves to build; whether it's with LEGOs or through solving complex puzzles. 
+                    And our Sunday board game battles are epic, complete with Monopoly, Catan, and Risk. 
+                    Those games were my first foray into strategy and negotiation, and they’ve stuck with me. 
+                    It’s that love of problem-solving and friendly competition that’s been a driving force in my life.
+                </p>
+                <img src="prom.jpg" alt="Family">
+            </div>
+        </div>
+
+        <div class="hobby">
+            <h3>Learnaholic</h3>
+            <p>Three topics that fascinate me: Systems thinking, neuroscience/healthtech, and history of society.</p>
+            <button class="toggle" data-target="#learningDetails">More about my interests</button>
+            <div id="learningDetails" class="details" style="display: none;">
+                    <!-- Insert learning interests content -->
+                <p>I'm really into three things that I want to keep learning about: how societies have changed over time, how our brains can adapt and grow, and how everything is connected through systems. 
+                    Understanding these topics better is helping me figure out how to bring out the best in people.
+                    So, if you feel like you can help me complete my puzzle, please reach out!
+                    The Puzzle: How should we reinvent our systems to unlock society's full potential.
+                </p>
+                <img src="learn.jpg" alt="learn">
+            </div>
+        </div>
+        </div>    
+
+        <script>
+            $(document).ready(function() {
+                $('.toggle').click(function() {
+                    var target = $(this).data('target');
+                    $(target).slideToggle();
+                });
+            });
+        </script>
+</body>
+</html>

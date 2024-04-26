@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - Career</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #242424;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px; 
+    }
+    .timeline-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #242424;
+        color: #fff;
+        border-radius: 10px;
+    }
+
+    .timeline-container {
+        position: relative;
+    }
+
+    .slide {
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #1a1a1a; /* Dark background */
+    }
+
+    .slide-image {
+        max-width: 50%; /* Adjust as needed */
+        height: auto;
+        border-radius: 10px; /* Rounded corners */
+        display: block;
+        margin: 0 auto;
+    }
+
+    button.prev, button.next {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    button.prev:hover, button.next:hover {
+        background-color: #555;
+    }
+
+</style>
+<body>
+    <!-- Page Header -->
+    <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+                <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+                <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+    
+    <div class="timeline-wrapper">
+        <div class="timeline-container">
+            <div class="slide" id="junior-year">
+                <h3>Junior Year - Babson College</h3>
+                <img src="chloewin.jpg" alt="Junior Year" class="slide-image">
+                <p> 5x Dean's list and 3.85 GPA<br/>
+                    eTower President 2023.<br/>
+                    BETA Challenge UG Winner 2024: $35k<br/>
+                    Butler Scholar, Natalie Taylor Scholar and PGN member<br/>
+                    Additional 5x Pitch Competition Winner: +$10K in additional grants<br/>
+                    WIN Lab Accelerator 2024<br/>
+                    Babson Magazine Entrepreneur of the year (Winter 2023)<br/>
+                </p><br/>
+                <button class="prev">Previous</button>
+                <button class="next">Next</button>
+            </div>
+            <div class="slide" id="soph-year">
+                <h3>Sophomore Year - Babson College</h3>
+                <img src="chloesvp.jpg" alt="soph Year" class="slide-image">
+                <p> 3.9 GPA<br/>
+                    eTower President 2023.<br/>
+                    Summer Venture Program 2023<br/>
+                    Babson Acceleration Club Double Prize Winner<br/>
+                    Draper Pitch Competition Semi-Finalist<br/>
+                    Natalie Taylor Scholar, Babson MENA Founding Member<br/>
+                    Babson Consulting Association Executive Vice President<br/>
+                </p><br/>
+                <button class="prev">Previous</button>
+                <button class="next">Next</button>
+            </div>
+            <div class="slide" id="fresh-year">
+                <h3>Freshman Year - Babson College</h3>
+                <img src="babson.jpg" alt="Fresh Year" class="slide-image">
+                <p>
+                    3.9 GPA<br/>
+                    Private Equity Intern at Mizzen Capital<br/>
+                    MIT Sloan Neuroscience in Business Certification<br/>
+                    Director of Innovation Ecosystem at Born Global Foundation<br/>
+                    World Biodiversity Forum 2022 Speaker<br/>
+                    BETA Challenge Semi-Finalist<br/>
+                    Undergraduate Consulting Program Leader<br/>
+                    eTower VP of Alumni & eTower Associate<br/>
+                </p><br/>
+                <button class="prev">Previous</button>
+                <button class="next">Next</button>
+            </div>
+            <div class="slide" id="hs-year">
+                <h3>High School</h3>
+                <img src="friends.jpg" alt="HS Year" class="slide-image">
+                <p>
+                    French Baccalaureate Graduate with Highest Honors; Concentrating in Biology, Physics & Chemistry<br/>
+                    Founder & Director the Impossible Lebanon Challenge<br/>
+                    Founder & Leader the <a href="https://www.youtube.com/watch?v=xREElHiS81s">Beirut Biomimics</a> which is currently franchised accross highschools as the Biominds<br/>
+                    Awarded Highest Honor as Best Girl Scouts Chief<br/>
+                    Youngest Publishers at Worl Biodiversity Forum in Davos. Recognized on international TV & Newspapers<br/>
+                    Published Paper: <a href="https://sciencers.org/index.php/butterflies-are-more-than-just-ornamental-scientists-believe-they-can-tackle-vision-loss-too/">Butterflies are more than just ornamental</a><br/>               
+                </p><br/>
+                <button class="prev">Previous</button>
+                <button class="next">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var currentSlide = $('.slide').first();
+            currentSlide.show();
+
+            $('.next').click(function() {
+                var nextSlide = currentSlide.next('.slide');
+                if (nextSlide.length) {
+                    currentSlide.hide();
+                    nextSlide.show();
+                    currentSlide = nextSlide;
+                }
+            });
+
+            $('.prev').click(function() {
+                var prevSlide = currentSlide.prev('.slide');
+                if (prevSlide.length) {
+                    currentSlide.hide();
+                    prevSlide.show();
+                    currentSlide = prevSlide;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

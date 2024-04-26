@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* Main Content Styles */
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #242424; /* Dark grey background */
+        margin: 20px auto;
+        border-radius: 10px; /* Rounded corners */
+        max-width: 1200px; /* Adjust the max-width as necessary */
+    }
+
+    /* Bio Style */
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #242424; /* Assuming a dark theme for the whole page */
+    }
+
+    /* Timeline styles */
+    .timeline {
+        width: 80%;
+        margin: 50px auto; /* Increase the top and bottom margin if needed */
+        position: relative;
+        padding-bottom: 50px; /* Add padding at the bottom of the timeline */
+    }
+
+    .container {
+        display: block; /* Change from flex to block to stack elements */
+        border: none; /* Remove border if not needed */
+        margin: 20px 0;
+        padding: 20px;
+        background: #333; /* Slightly darker grey background */
+        border-radius: 10px; /* Rounded corners */
+        color: white; /* Light text for readability */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    }
+
+    .year {
+        margin-bottom: 20px; /* Space between text and image */
+    }
+
+    .year h2 {
+        color: #f3f3f3; /* Light grey color for the year */
+        margin-bottom: 0.5em; /* Space after the year */
+    }
+
+    .container img.year-image {
+        width: 100%; /* Make the image responsive */
+        max-width: 350px; /* Max width for the images */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners for the images */
+        margin: 0 auto 30px; /* Center the image and add space below */
+        display: block; /* Block display to handle margins correctly */
+    }
+
+    /* Add a pseudo-element for the line if you want a connecting line */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 2px; /* Line thickness */
+        background: #ccc; /* Line color */
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1; /* Ensure the line is behind the containers */
+    }
+
+
+</style>
+
+<body>
+    <!-- Page Header -->
+     <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+                <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+                <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+    
+
+    <div class="timeline">
+        <div class="container" id="2003">
+            <h2 class="year">2003</h2>
+            <p>I was born in Paris, France, on July 17, 2003. I don’t have memories from that time, but I’ve heard I was a very chubby baby, nicknamed "the buddha baby" by our neighbors. My mom, an incredible woman, ran a kindergarten in our basement, where my sister Tia, our neighbors, and I learned to laugh, cry, walk and talk together. </p>
+            <img src="fam.jpg" alt="Image for 2003" class="year-image">
+        </div>
+        <div class="container" id="2008">
+            <h2 class="year">2008</h2>
+            <p>In 2008, I moved from Paris to Beirut, Lebanon. It was a big change. I was the new girl with a French accent, and my cousin was my only friend. That year, I started playing guitar, improved my piano skills, began skiing, and took up tennis. It was a year of self-discovery.  </p>
+            <img src="firstgrade.jpg" alt="Image for 2008" class="year-image">
+        </div>
+        <div class="container" id="2010">
+            <h2 class="year">2010</h2>
+            <p>By the time I was 7 I was fluent in three languages, three instruments: piano, guitar, drums, and three sports: tennis, skiing, Taekwon-do </p>
+            <img src="ski.jpg" alt="Image for 2010" class="year-image">
+        </div>
+        <div class="container" id="2013">
+            <h2 class="year">2013</h2>
+            <p>At 10, I joined the Girl Scouts, not realizing how much it would influence who I would become. I was a Girl Scout for eight years, learning leadership, teamwork, resilience, wilderness survival, and problem-solving under pressure. And a great bonus: I learned how to build cool structures like this one.</p>
+            <img src="scouts.jpg" alt="Image for 2013" class="year-image">
+        </div>
+        <div class="container" id="2018">
+            <h2 class="year">2018</h2>
+            <p>At 14, after 6 weeks at Stanford I published a paper about utilizing nanobiomaterials found in butterfly wings to solve glaucoma</p>
+            <img src="sciencers.jpg" alt="Image for 2018" class="year-image">
+        </div>
+        <div class="container" id="2019">
+            <h2 class="year">2019</h2>
+            <p>At 15, inspired by my dad's complaints about the inefficiency of solar panels, I founded the Beirut Biomimics at my high school to improve solar technology using biomimicry. By 16, I was the youngest presenter at the World Biodiversity Forum in Davos.</p>
+            <img src="beirutbiomimics.jpg" alt="Image for 2019" class="year-image">
+        </div>
+        <div class="container" id="2020">
+            <h2 class="year">2020</h2>
+            <p>At 16, I launched the Impossible Lebanon Challenge, prompting high school students nationwide to address Lebanon's most pressing challenges. This led to the creation of a waste-to-energy biogarden, a mental health non-profit, and an innovative composting process inspired by ants.</p>
+            <img src="impoleb.jpg" alt="Image for 2020" class="year-image">
+        </div>
+        <div class="container" id="2021">
+            <h2 class="year">2021</h2>
+            <p>17, bittersweet. It was time to say goodbye to everything and everyone I knew. But, it was the start of an incredible journey at...Babson College</p>
+            <img src="babson.jpg" alt="Image for 2021" class="year-image">
+        </div>
+        <div class="container" id="2022">
+            <h2 class="year">2022</h2>
+            <p>By 18, I secured my dream internship with a women-led impact investing firm, setting the stage for my own venture.</p>
+            <img src="internpe.jpg" alt="Image for 2022" class="year-image">
+        </div>
+        <div class="container" id="2023">
+            <h2 class="year">2023</h2>
+            <p>At 19, I founded my company, led an all-female team, won three pitch competitions, and gained 900 sign-ups for our MVP within two weeks. I also earned my skydiving license.</p>
+            <img src="skydive.jpg" alt="Image for 2023" class="year-image">
+
+        </div>
+        <div class="container" id="2024">
+            <h2 class="year">2024</h2>
+            <p>At 20, I raised $85,000, won multiple pitch contests, was featured in Babson's magazine, and built a profitable startup with a thriving community of over 50 female founders.</p>
+            <img src="cofounder.jpg" alt="Image for 2024" class="year-image">
+        </div>
+        <div class="container" id="2024">
+            <h2 class="year">2028</h2>
+            <p>By 25, I aim to make BOND the leading leadership training tool globally, start a firm investing in female-led ventures, and skydive in over 50 different drop zones.</p>
+            <img src="journey.jpg" alt="Image for 2024" class="year-image">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
