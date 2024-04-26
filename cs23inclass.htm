@@ -5,83 +5,41 @@
   <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
 
-	<title>CS23-InClass-jQuery</title>
+	<title>CS23</title>
 
 	<style>
-	/* Your styles go here */
-    p#p1 {
-        display:none; background-color: magenta; margin-left: 200px;
-    }
-    img{
-        margin-right:50px; width:200px; height:150px;
-    }
-
-    .blue {
-        color: navy; text-decoration:underline; font-weight: bold;
-    }
-    .green {
-        color: darkgreen; font-family: Lucida Handwriting; font-style: italic;
-    }
-
-    
+		p#tigerbody {display: none; background-color: rgb(255, 0, 221); margin-right: 300px;}
+		img#baldeagle1, img#baldeagle2 {height: 300px; width: 400px; margin-right: 50px;}
 	
 	</style>
     
-	<script src="https://code.jquery.com/jquery.min.js"></script>
-    <script>
-	/* Your JavaScript goes here */
-	$(function(){
-        // Exercise 1
-		$("h1#h11").click ( function() {
+	<script src="https://code.jquery.com/jquery.min.js"> </script>
+	<script>
 
-			$("h2#h21").css("color", "red");
-            $("h2#h22").css({"color":"navy", "font-family": "Arial", "font-style": "italic"});
-
+	$(function() {
+		$("h1#basics").click (function(){
+			$("h2#secondh2").css("color", "navy");
+			$("h2#firsth2").css({"color":"red", "font:style":"italic", "text-align":"right"});
 		});
-        // Exercise 2
-        $("h2#h23").click ( function(){
-            $("h2#h24").toggle(); 
-            // We used /hide() earlier with the .show() -- but .toggle() is better it is a combination of both
-        });
 
-        // $("h2#h23").dblclick ( function(){
-            // $("h2#h24").show();
-        // });
+		$("h2#exercise1first").click (function(){
+			$("h2#exercise1second").toggle();
+			$(this).text("mueheheheheheheheheheheheheheheheheheheh");
+		});
 
-        // Exercise 3
-        $("h1#h12").click ( function (){
-            $("p#p1").slideToggle();
-        });
+		$("h1#tigerheader").click (function(){
+			$("p#tigerbody").slideToggle();
+		});
 
-        // Exercise 4
-        $("img").mouseover (function (){
-            $(this).width(400).height(300);
-        });
+		$("img").mouseover (function(){
+			$("img").width(900).height(100);
+		});
 
-        $("img").mouseout (function (){
-            $(this).width(200).height(150);
-        });
-
-        // Exercise 5
-        $("h2#h25").click (function (){
-            $(this).addClass("blue");
-            $("h2#h26").removeClass("blue");
-            $("h2#h26").addClass("green");
-        });
-
-        $("h2#h26").click (function(){
-            $(this).removeClass();
-            $(this).addClass("blue");
-            $("h2#h25").removeClass();
-            $("h2#h25").addClass("green");
-        });
-
-
-
-
-
-	});
+		$("img").mouseout (function(){
+			$("img").width(400).height(300);
+		});
 		
+	});		
 	
 
 		
@@ -91,20 +49,21 @@
 
   <body>
 	<!-- Your HTML goes here -->
-	<!-- Start Exercise 1 here -->
-	<h1 id="h11"> Basics of jQuery</h1>
-	<h2 id="h21"> This exercise introduces you to using simple jQuery functions</h2>
-	<h2 id="h22"> It also teaches you the basics of jQuery</h2>
+	<h1 id="basics"> Basics of jQuery</h1>
+	<h2 id="firsth2"> This exercise introduces you to using simple jQuery functions</h2>
+	<h2 id="secondh2"> It also teaches you the basics of jQuery</h2>
 	
+	<!-- Start Exercise 1 here -->
+	<h2 id="exercise1first">when you click on this line</h2>
+	<h2 id="exercise1second">i will dissappear!</h2>
 
 	<!-- Start Exercise 2 here -->
-	<h2 id="h23"> When you click on me...</h2>
-	<h2 id="h24"> I will disappear</h2>
+    
 	
 
 	<!-- Start Exercise 3 Here -->
-	<h1 id="h12" >More About Tigers</h1>
-	<p id="p1">
+	<h1 id="tigerheader">More About Tigers</h1>
+	<p id="tigerbody">
         In the past, tigers were found throughout Asia, from the Caucasus and the Caspian Sea to Siberia and the Indonesian islands of Java, Bali and Sumatra. 
         Fossil remains indicate tigers were also present in Borneo and Palawan in the Philippines during the late Pleistocene and Holocene.[74][75]
         During the 20th century, tigers became extinct in western Asia and were restricted to isolated pockets in the remaining parts of their range. 
@@ -116,14 +75,14 @@
 	</p>
 
 	<!-- Start Exercise 4 Here -->
-    <img src="baldeagle1.jpg" alt="Sitting Eagle" title="Bald Eagle Sitting">
-    <img src="baldeagle2.jpg" alt="Flying Eagle" title="Bald Eagle Flying">
-       
+    
+	<img id="baldeagle1" src="baldeagle1.jpg" title="bald eagle" alt="bald eagle"/>
+	<img id="baldeagle2" src="baldeagle2.jpg" title="bald eagle" alt="bald eagle"/>
 
 	<!-- Start Exercise 5 here -->
-    <h2 id="h25">This is some cool stuff with classes and jquery</h2>
-    <h2 id="h26">This is more cool stuff with classes and jquery</h2>
 
+    
+	
 
 	<!-- Use the same two images for Exercise 6. -->
 

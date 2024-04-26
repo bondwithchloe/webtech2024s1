@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+
+	<title>CS24-InClass-jQuery</title>
+
+	<style>
+	/* Your styles go here */
+		p#p1{
+			display: none;
+			background-color: beige;
+			margin-right: 200px;
+			margin-left: 200px;
+		}
+    
+	
+	</style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="jqFancyTransitions.1.8.js" type="text/javascript"></script>
+	<script src="jquery.cycle.all.js"></script>
+	<script src="jquery.easing.js"></script>
+	<script>
+	/* Your JavaScript goes here */
+		$(function (){
+			/*This is the use of If statements with Jquery*/
+			$("h1#h11").click ( function(){
+				$("p#p1").slideToggle();
+				if($(this).html == "More About Tigers (+)"){
+					$(this).html ("Less About Tigets (-)");
+				}
+				else{
+					$(this).html ("More About Tigers (+)")
+				}
+			});
+
+			/*-------------------------------------------
+			$('#slider').jqFancyTransitions({ width: 400, height: 300 });
+			-------------*/
+			$('#slider').cycle({ 
+                    fx:    'zoom', 
+                    sync:  false, 
+                    delay: -2000 
+                });
+
+		});
+
+		
+	
+
+		
+    
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Basics of jQuery</h1>
+	<h2> This exercise introduces you to using simple jQuery functions</h2>
+	<h2> It also teaches you the basics of jQuery</h2>
+	
+	<!-- Start Exercise 1 here -->
+	
+
+	<!-- Start Exercise 2 here -->
+    
+	
+
+	<!-- Start Exercise 3 Here -->
+	<h1 id="h11">More About Tigers (+)</h1>
+	<p id="p1">
+        In the past, tigers were found throughout Asia, from the Caucasus and the Caspian Sea to Siberia and the Indonesian islands of Java, Bali and Sumatra. 
+        Fossil remains indicate tigers were also present in Borneo and Palawan in the Philippines during the late Pleistocene and Holocene.[74][75]
+        During the 20th century, tigers became extinct in western Asia and were restricted to isolated pockets in the remaining parts of their range. 
+        They were extirpated on the island of Bali in the 1940s, around the Caspian Sea in the 1970s, and on Java in the 1980s. This was the result of 
+        habitat loss and the ongoing killing of tigers and tiger prey. Today, their fragmented and partly degraded range extends from India in the west 
+        to China and Southeast Asia. The northern limit of their range is close to the Amur River in southeastern Siberia. The only large island they 
+        still inhabit is Sumatra.[1] Since the beginning of the 20th century, tigers' historical range has shrunk by 93%. In the decade from 1997 to 2007, 
+        the estimated area known to be occupied by tigers has declined by 41%.[2][76]
+	</p>
+	<div id="slider">
+		<img src="tiger1.jpg" alt="Good Tiger" title="Good Tiger" width="400" height="300"/>
+        <img src="tiger2.jpg" alt="Bad Tiger" title="Bad Tiger" width="400" height="300"/>
+        <img src="tiger3.jpg" alt="Dirty Tiger" title="Dirty Tiger" width="400" height="300"/>
+        <img src="tiger4.jpg" alt="Nice Tiger" title="Nice Tiger" width="400" height="300"/>
+        <img src="tiger5.jpg" alt="Pretty Tiger" title="Pretty Tiger" width="400" height="300"/>
+        <img src="tiger6.jpg" alt="Massive Tiger" title="Massive Tiger" width="400" height="300"/>
+        <img src="tiger7.jpg" alt="Peaceful Tiger" title="Peaceful Tiger" width="400" height="300"/>
+	</div>
+	<!-- Start Exercise 4 Here -->
+       
+
+	<!-- Start Exercise 5 here -->
+
+    
+	
+
+	<!-- Use the same two images for Exercise 6. -->
+
+   
+	
+  </body>
+</html>

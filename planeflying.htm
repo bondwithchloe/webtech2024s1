@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>JS Flying A Plane</title>
+
+	<style>
+	/* Your styles go here */
+	img#a{position:absolute; top:100px;}
+	button{position:absolute; top:150px;}
+	</style>
+	
+	<script type="text/javascript">
+	var pos=20;
+	var planecontrol, flyflag;
+	flyflag = 0;
+
+	function flyPlane()
+	{
+		const myplane = document.getElementById("a");
+		myplane.style.left = pos + "px";
+		pos = pos + 5;
+		
+		if (pos > 1200)
+		{
+			pos = 20;
+		}
+		flyflag = 1;
+		planecontrol = setTimeout("flyPlane()", 50);
+	}
+
+	function startstop(){
+		if(flyflag == 1){
+			clearTimeout(planecontrol);
+			flyflag = 0;
+		}
+		else{
+			planecontrol = setTimeout("flyPlane()", 50);
+		}
+	}
+	</script>
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<img id="a" src="flying.jpg" alt="Flying Plane" title="Fly"/>		
+	<button onclick="startstop()">Click to Start</button>
+	
+  </body>
+</html>
