@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloe Samaha - About Me</title>
+    <title>Chloe Samaha - Home</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Add jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -61,17 +61,17 @@
     /* Featured Styles */
     .featured-section {
         display: flex;
-        justify-content: space-between; /* Aligns children with space between at the main axis */
+        justify-content: space-between; 
         flex-wrap: wrap;
         background-color: #242424;
         padding: 20px;
         margin: 20px auto;
         border-radius: 10px;
-        max-width: 1200px; /* Matching max-width with .main-content for alignment */
+        max-width: 1200px; 
     }
 
     .featured-item {
-        flex: 1 1 calc(33.333% - 40px); /* Adjusting the basis to account for margin */
+        flex: 1 1 calc(33.333% - 40px); 
         max-width: calc(33.333% - 40px);
         box-sizing: border-box;
         display: flex;
@@ -276,7 +276,7 @@
     </div>
 
     <script>
-        // Function to dynamically change the background color based on the time of the day
+        // JavaScript Change the background color based on the time of the day -- Remove later?
         function changeBackgroundColor() {
             var currentDate = new Date();
             var currentHour = currentDate.getHours();
@@ -294,10 +294,9 @@
             }
         }
 
-        // Call the changeBackgroundColor function when the page loads
         window.onload = function() {
             changeBackgroundColor();
-            $('.main-content').fadeIn(2000); // Fade in effect
+            $('.main-content').fadeIn(2000); 
         };
     </script>
 </body>

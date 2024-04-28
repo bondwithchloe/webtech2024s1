@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloe Samaha - About Me</title>
+    <title>Chloe Samaha - Sitemap</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Add jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,46 +18,46 @@
         margin: 20px auto;
         max-width: 1200px;
         border-radius: 10px;
-        /* Reset the counters for the list */
+        
         counter-reset: section;
-        display: none; /* Hide initially */
+        display: none; 
     }
 
     /* Style for the top-level list items */
     .sitemap-container > ul {
-        list-style-type: none; /* Remove default list styling */
-        padding-left: 0; /* Reset padding */
-        counter-reset: listCounter; /* Reset the list counter */
+        list-style-type: none; 
+        padding-left: 0; 
+        counter-reset: listCounter;
     }
 
     .sitemap-container > ul > li {
-        margin: 10px 0; /* Add margin for each list item */
-        counter-increment: listCounter; /* Increment the list counter */
+        margin: 10px 0; 
+        counter-increment: listCounter;
     }
 
     /* Style for the top-level list items' numbers */
     .sitemap-container > ul > li::before {
-        content: counter(listCounter) ". "; /* Display the counter */
-        font-weight: bold; /* Make the counter bold */
-        margin-right: 5px; /* Add space after the counter */
+        content: counter(listCounter) ". "; 
+        font-weight: bold; 
+        margin-right: 5px; 
     }
 
     /* Style for the nested lists */
     .sitemap-container ul ul {
-        list-style-type: none; /* Remove default list styling */
-        padding-left: 20px; /* Add padding to the nested list for indentation */
-        counter-reset: sublistCounter; /* Reset the sublist counter */
+        list-style-type: none; 
+        padding-left: 20px; 
+        counter-reset: sublistCounter; 
     }
 
     /* Style for the nested list items */
     .sitemap-container ul ul li {
-        counter-increment: sublistCounter; /* Increment the sublist counter */
+        counter-increment: sublistCounter; 
     }
 
     /* Style for the nested list items' letters */
     .sitemap-container ul ul li::before {
-        content: counter(sublistCounter, lower-alpha) ". "; /* Display the counter as lowercase letters */
-        margin-right: 5px; /* Add space after the letter */
+        content: counter(sublistCounter, lower-alpha) ". "; 
+        margin-right: 5px; 
     }
 </style>
 

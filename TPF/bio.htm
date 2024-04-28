@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrolling Timeline</title>
+    <title>Chloe Samaha - Bio Scrolling Timeline</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,10 +14,10 @@
         flex-wrap: wrap;
         align-items: flex-start;
         padding: 20px;
-        background-color: #242424; /* Dark grey background */
+        background-color: #242424; 
         margin: 20px auto;
-        border-radius: 10px; /* Rounded corners */
-        max-width: 1200px; /* Adjust the max-width as necessary */
+        border-radius: 10px; 
+        max-width: 1200px; 
     }
 
     /* Bio Style */
@@ -25,57 +25,57 @@
         height: 100%;
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #242424; /* Assuming a dark theme for the whole page */
+        background-color: #242424; 
     }
 
     /* Timeline styles */
     .timeline {
         width: 80%;
-        margin: 50px auto; /* Increase the top and bottom margin if needed */
+        margin: 50px auto; 
         position: relative;
-        padding-bottom: 50px; /* Add padding at the bottom of the timeline */
+        padding-bottom: 50px;
     }
 
     .container {
-        display: block; /* Change from flex to block to stack elements */
-        border: none; /* Remove border if not needed */
+        display: block; 
+        border: none; 
         margin: 20px 0;
         padding: 20px;
-        background: #333; /* Slightly darker grey background */
-        border-radius: 10px; /* Rounded corners */
-        color: white; /* Light text for readability */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        background: #333; 
+        border-radius: 10px; 
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     }
 
     .year {
-        margin-bottom: 20px; /* Space between text and image */
+        margin-bottom: 20px; 
     }
 
     .year h2 {
-        color: #f3f3f3; /* Light grey color for the year */
-        margin-bottom: 0.5em; /* Space after the year */
+        color: #f3f3f3; 
+        margin-bottom: 0.5em; 
     }
 
     .container img.year-image {
-        width: 100%; /* Make the image responsive */
-        max-width: 350px; /* Max width for the images */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 10px; /* Rounded corners for the images */
-        margin: 0 auto 30px; /* Center the image and add space below */
-        display: block; /* Block display to handle margins correctly */
+        width: 100%; 
+        max-width: 350px; 
+        height: auto; 
+        border-radius: 10px; 
+        margin: 0 auto 30px; 
+        display: block; 
     }
 
-    /* Add a pseudo-element for the line if you want a connecting line */
+    /* Connecting line */
     .timeline::after {
         content: '';
         position: absolute;
-        width: 2px; /* Line thickness */
-        background: #ccc; /* Line color */
+        width: 2px; 
+        background: #ccc; 
         top: 0;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        z-index: -1; /* Ensure the line is behind the containers */
+        z-index: -1; 
     }
 
 
@@ -121,7 +121,7 @@
         <a href="credits.htm">Credits</a>
     </div>
     
-
+    <!-- Timeline -->
     <div class="timeline">
         <p>JavaScript randomly flips the images horizontally or vertically when the page loads.</p>
         <div class="container" id="2003">
