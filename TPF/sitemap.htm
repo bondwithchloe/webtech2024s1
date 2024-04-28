@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+  /* Style for the sitemap container */
+    .sitemap-container {
+        background-color: #242424;
+        color: white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 1200px;
+        border-radius: 10px;
+        /* Reset the counters for the list */
+        counter-reset: section;
+    }
+
+    /* Style for the top-level list items */
+    .sitemap-container > ul {
+        list-style-type: none; /* Remove default list styling */
+        padding-left: 0; /* Reset padding */
+        counter-reset: listCounter; /* Reset the list counter */
+    }
+
+    .sitemap-container > ul > li {
+        margin: 10px 0; /* Add margin for each list item */
+        counter-increment: listCounter; /* Increment the list counter */
+    }
+
+    /* Style for the top-level list items' numbers */
+    .sitemap-container > ul > li::before {
+        content: counter(listCounter) ". "; /* Display the counter */
+        font-weight: bold; /* Make the counter bold */
+        margin-right: 5px; /* Add space after the counter */
+    }
+
+    /* Style for the nested lists */
+    .sitemap-container ul ul {
+        list-style-type: none; /* Remove default list styling */
+        padding-left: 20px; /* Add padding to the nested list for indentation */
+        counter-reset: sublistCounter; /* Reset the sublist counter */
+    }
+
+    /* Style for the nested list items */
+    .sitemap-container ul ul li {
+        counter-increment: sublistCounter; /* Increment the sublist counter */
+    }
+
+    /* Style for the nested list items' letters */
+    .sitemap-container ul ul li::before {
+        content: counter(sublistCounter, lower-alpha) ". "; /* Display the counter as lowercase letters */
+        margin-right: 5px; /* Add space after the letter */
+    }
+
+</style>
+
+<body>
+    <!-- Page Header -->
+     <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+                <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+                <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+
+    <!-- Sitemap Specific Info -->
+    <div class="sitemap-container">
+        <h1>Sitemap</h1>
+
+        <ul>
+            <li><a href="index.htm">Home</a>
+            </li>
+                <li>Professional
+                    <ul>
+                    <li><a href="career.htm">Career</a></li>
+                    <li><a href="skills.htm">Skills</a></li>
+                    <li><a href="projects.htm">Projects</a></li>
+                    </ul>
+                </li>
+                <li>Personal
+                    <ul>
+                    <li><a href="bio.htm">Bio</a></li>
+                    <li><a href="hobbies.htm">Hobbies</a></li>
+                    <li><a href="blog.htm">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.htm">Contact</a></li>
+                <li><a href="sitemap.htm">Sitemap</a></li>
+                <li><a href="credits.htm">Credits</a></li>
+        </ul>
+
+        <p>
+            The button below uses JavaScript to increase the font size of my name.
+        </p>
+
+          <!-- Button to Trigger Font Size Change -->
+            <button onclick="changeFontSize()">Increase Font Size</button>
+    </div>
+
+    <!-- JavaScript to Change Font Size -->
+    <script>
+        function changeFontSize() {
+            var heading = document.getElementById('heading');
+            var currentSize = window.getComputedStyle(heading).fontSize;
+            var newSize = parseInt(currentSize) + 5 + 'px'; // Increase font size by 5 pixels
+            heading.style.fontSize = newSize;
+        }
+    </script>
+</body>
+</html>

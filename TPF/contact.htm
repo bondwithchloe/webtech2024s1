@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<style>
+    /* Main Content Styles */
+    .contact-container {
+        display: block; 
+        padding: 20px;
+        background-color: #242424;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px; 
+        color: white; 
+    }
+
+    .contact-container h1 {
+        margin-bottom: 20px; 
+        text-align: left; 
+    }
+
+    /* Form container */
+    .form-container {
+        background-color: #333; 
+        padding: 20px;
+        border-radius: 5px; 
+    }
+
+    /* Form Styles */
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin-top: 0; 
+    }
+
+    .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+        color: white;
+        text-align: left; 
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #555; 
+        border-radius: 5px;
+        background-color: #555;
+        color: white;
+    }
+
+    .contact-form button {
+        padding: 10px 15px;
+        background-color: #007BFF; 
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px; 
+        width: auto; 
+    }
+
+    /* Placeholder styles to ensure consistency across all form fields GPT recommendation -- great find */
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        color: #bbb; 
+        opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%; 
+        }
+    }
+
+    
+</style>
+
+<body>
+    <!-- Page Header -->
+     <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+                <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+                <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+
+    <!-- Contact Form -->
+    <div class="contact-container">
+        <h1>Contact Me :)</h1>
+        <div class="form-container"> <!-- New container for the form with lighter background -->
+            <form class="contact-form" action="send_email.php" method="post">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="fullname" placeholder="Your full name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // jQuery function to change background color on hover
+        $(document).ready(function(){
+            $(".form-container").hover(function(){
+                $(this).css("background-color", "#111");
+            }, function(){
+                $(this).css("background-color", "#333");
+            });
+        });
+    </script>
+</body>
+</html>

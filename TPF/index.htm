@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    /* Main Content Styles */
+    .main-content {
+        display: none; /* Hide initially */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #242424;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px;
+    }
+
+    .text-section {
+        flex: 1;
+        margin-top: 0px;
+    }
+
+    .image-section {
+        flex-shrink: 0;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    #profilepic {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .main-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-section,
+        .image-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-section {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Featured Styles */
+    .featured-section {
+        display: flex;
+        justify-content: space-between; /* Aligns children with space between at the main axis */
+        flex-wrap: wrap;
+        background-color: #242424;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px; /* Matching max-width with .main-content for alignment */
+    }
+
+    .featured-item {
+        flex: 1 1 calc(33.333% - 40px); /* Adjusting the basis to account for margin */
+        max-width: calc(33.333% - 40px);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #2e2e2e;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .featured-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .featured-section h2 {
+        color: white;
+        text-align: left; 
+        width: 100%;
+    }
+
+    .featured-item h3,
+    .featured-item p,
+    .featured-item a {
+        color: white;
+    }
+
+    /* Newsletter Subscription Styles */
+    .newsletter-subscription {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        background-color: #242424; 
+        padding: 20px; 
+        margin: 20px auto; 
+        border-radius: 10px; 
+        max-width: 1200px; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    .newsletter-subscription h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%; 
+        color: white; 
+    }
+
+    #newsletter-form {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #newsletter-form input[type="email"] {
+        flex-grow: 1; 
+        padding: 10px;
+        border: 1px solid #2e2e2e; 
+        border-radius: 5px; 
+        margin-right: 10px; 
+    }
+
+    #newsletter-form button {
+        flex-grow: 1; 
+        padding: 10px 20px;
+        border: 1px solid #2e2e2e; 
+        background-color: #2e2e2e; 
+        color: white; 
+        border-radius: 5px; 
+        cursor: pointer;
+        white-space: nowrap; 
+    }
+
+    #newsletter-form button,
+    #newsletter-form input[type="email"] {
+        height: 40px; 
+    }
+
+    @media (max-width: 768px) {
+        .newsletter-subscription {
+            padding: 20px; 
+        }
+
+        #newsletter-form {
+            flex-direction: column; 
+            gap: 20px; 
+            width: calc(100% - 40px); 
+        }
+        
+        #newsletter-form input[type="email"],
+        #newsletter-form button {
+            width: 100%; 
+        }
+    }
+
+</style>
+
+<body>
+    <!-- Page Header -->
+    <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+            <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+            <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+            <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- About Me -->
+    <div class="main-content">
+        <div class="text-section">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm Chloe Samaha. <br/>
+                Thanks for dropping by :) You are about to learn A LOT about me <br/><br/>
+                Most importantly, I want you to know this: My current obsession is understanding what it takes to unlock someone's full potential. <br/><br/> 
+                I uncovered this after I landed my dream job at a women-led PE firm in NYC. <br/> 
+                I was incredibly frustrated with the limitations of current workplace dynamics, which stifled my potential and ability to make an impact. <br/><br/>
+                So I started building the solution for it: BOND, the Salesforce for managers. <br/><br/>
+                Now that you have a trailer, enjoy the movie! <br/><br/>
+                I always love connecting with like-minded people. So if you believe that you have a piece to the puzzle, reach out! <br/><br/> 
+            </p>
+
+<p>
+                Note for Prof. Shankar: <br/>
+                JavaScript dynamically changes the background color of the page based on the time of the day. <br/>
+                JQuery Effect 1: Fade-in effect to the main content when the page loads. (Home Page) <br/>
+                JQuery Effect 2: Change the background color of the form container when the user hovers over it. (Contact Us Page)<br/>
+            </p>
+        </div>
+        <div class="image-section">
+            <img id="profilepic" src="pilotlaunch.jpg" alt="Chloe Samaha" />
+        </div>
+    </div>
+
+    <!-- Featured -->
+    <div class="featured-section">
+        <h2>Featured</h2>
+        <div class="featured-item">
+            <img src="chloesvp.jpg" alt="Feature 1">
+            <h3>Babson Magazine: Building Relationships in the Workplace</h3>
+            <p>Chloe Samaha '25 is just beginning her career as an entrepreneur, but she’s already mastering a key aspect of entrepreneurial leadership: the importance of people and...</p>
+            <a href="https://entrepreneurship.babson.edu/chloe-samaha-bond/">Read more</a>
+        </div>
+        <div class="featured-item">
+            <img src="babsonfinale.jpg" alt="Feature 2">
+            <h3>BostInno: Three winners named for Babson’s $150k Pitch Competition</h3>
+            <p>The student winner is Chloe Samaha, a current junior at Babson, with her venture BOND, an app that connects managers of virtual teams with their employees.</p>
+            <a href="https://www.bizjournals.com/boston/inno/stories/news/2024/04/17/babson-entrepreneurship-2024.html">Read more</a>
+        </div>
+        <div class="featured-item">
+            <img src="chloewin.jpg" alt="Feature 3">
+            <h3>Thought&Action: B.E.T.A. Challenge Winners Rack Up Double the Awards</h3>
+            <p>Undergraduate student winner Samaha created BOND to address the rise in virtual workplaces, a situation that took a toll on her mental health during her first remote work internship.</p>
+            <a href="https://entrepreneurship.babson.edu/beta-challenge-winners-2024/">Read more</a>
+        </div>
+    </div>
+    
+    <!-- Subscription -->
+    <div class="newsletter-subscription">
+        <h2>Subscribe for life updates!</h2>
+        <form id="newsletter-form">
+            <input type="email" id="email" placeholder="email address" required>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to dynamically change the background color based on the time of the day
+        function changeBackgroundColor() {
+            var currentDate = new Date();
+            var currentHour = currentDate.getHours();
+            var body = document.querySelector('body');
+            
+            if (currentHour >= 6 && currentHour < 12) {
+                // Morning
+                body.style.backgroundColor = '#F0E68C'; // Light yellow
+            } else if (currentHour >= 12 && currentHour < 18) {
+                // Afternoon
+                body.style.backgroundColor = '#87CEEB'; // Light blue
+            } else {
+                // Evening/Night
+                body.style.backgroundColor = '#778899'; // Light slate gray
+            }
+        }
+
+        // Call the changeBackgroundColor function when the page loads
+        window.onload = function() {
+            changeBackgroundColor();
+            $('.main-content').fadeIn(2000); // Fade in effect
+        };
+    </script>
+</body>
+</html>

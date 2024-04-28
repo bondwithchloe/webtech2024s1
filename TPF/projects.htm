@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* Main Content Styles */
+    .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #242424;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px;
+        opacity: 0; /* Initially hide elements */
+        transition: opacity 0.5s ease; /* Add transition effect */
+    }
+
+    .text-section {
+        flex: 1;
+        margin-top: 0px;
+    }
+
+    .image-section {
+        flex-shrink: 0;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    #profilepic {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .main-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-section,
+        .image-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-section {
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Page Header -->
+    <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+            <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+            <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+            <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- BOND -->
+    <p>Scroll Down for JavaScript Animation</p>
+    <div class="main-content">
+        <div class="text-section">
+            <h2>BOND</h2>
+            <p>
+                The Salesforce for Managers <br/><br/>
+                We are creating a baseline LLM trained on leadership/management data whose specific purpose is to coach team leaders to understand the human behind their co-workers. <br/><br/>
+                We collect data on individual team members through our built employee engagement app and continuously customize every team’s model with their unique data. <br/><br/>
+                Through our unified platform (Admin Dashboard) managers can better understand their team (Who they are as people? And what can they do to help them perform best on this team?) <br/><br/> 
+            </p>
+        </div>
+        <div class="image-section">
+            <img id="profilepic" src="bond.jpg" alt="BOND" />
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="text-section">
+            <h2>Beirut Biomimics</h2>
+            <p>
+                8 high school students studying nature's genius. <br/><br/>
+                I founded the Beirut Biomimics in high school. A leading pioneering research project to enhance solar panel designs using Biomimicry, pushing the envelope of renewable energy technology. <br/><br/> 
+                We successfully presented our research at the inaugural World Biodiversity Forum in Davos, elevating Lebanon's presence on the global environmental stage. Our paper received extensive media coverage across Lebanese and European outlets, spotlighting the innovative approach to solar energy in TV segments and newspaper articles. <br/><br/>
+                
+            </p>
+        </div>
+        <div class="image-section">
+            <img id="profilepic" src="biomimics.jpg" alt="beirut biomimics" />
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="text-section">
+            <h2>Impossible Lebanon Challenge</h2>
+            <p>
+                Nationwide High School Essay Competition <br/><br/>
+                At 16, I launched the Impossible Lebanon Challenge, a competition that sparked a wave of youthful ingenuity across Lebanon.<br/><br/>
+                We raised $15,000 in prizes, to inspire the youth to take initiative and try to innovate solutions to what they believed to be our country's most pressing problems. <br/><br/>
+                In just three months, Ghassan transformed waste into energy with a pioneering biogarden, Chloe broke the silence around mental health with “Time to Talk Lebanon,” and Jason turned composting into an art form, inspired by the natural efficiency of ants. <br/><br/>
+                This was more than a competition; it was the ignition of hope and action, seeding a future where Lebanese youth could lead the charge in innovation.
+            </p>
+        </div>
+        <div class="image-section">
+            <img id="profilepic" src="lebanon.jpg" alt="impossible lebanon" />
+        </div>
+    </div>
+
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle the animation
+        function animateElements() {
+            var elements = document.querySelectorAll('.main-content');
+            elements.forEach(function(element) {
+                if (isInViewport(element)) {
+                    element.style.opacity = 1;
+                }
+            });
+        }
+
+        // Initial animation when page loads
+        animateElements();
+
+        // Listen for scroll events to trigger the animation
+        window.addEventListener('scroll', function() {
+            animateElements();
+        });
+    </script>
+</body>
+</html>
